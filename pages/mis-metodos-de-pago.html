@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/c3af30a602.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--todo: Incorporar fuentes para los íconos de tarjeta -->
+    <!--todo: Incorporar estilo general de popups del sitio -->
+
+</head>
+<body>
+<div class="pop-up">
+    <button class="pop-up__boton-cerrar"><i class="fa-solid fa-rectangle-xmark"></i></button>
+    <div class="pop-up__header">
+        <p>Nueva tarjeta</p>
+        <i class="fa-solid fa-credit-card"></i>
+    </div>
+    <form action="#" method="get" enctype="text/plain">
+        <div class="form__divisor">
+            <label for="new-card-alias">Alias</label>
+            <input type="text" name="new-card-alias" id="new-card-alias" placeholder="Alias" autofocus>
+        </div>
+        <div class="form__divisor">
+            <label for="new-card-number">Número de tarjeta</label>
+            <input type="text" name="new-card-number" id="new-card-number" placeholder="Número tarjeta">
+        </div>
+        <div class="form__divisor">
+            <label for="new-card-code">Código</label>
+            <input type="text" name="new-card-code" id="new-card-code" placeholder="Código" maxlength="3">
+            <label for="new-card-expiration">Vencimiento</label>
+            <input type="text" name="new-card-expiration" id="new-card-expiration" placeholder="00-00" maxlength="5">
+        </div>
+        <div class="form__divisor">
+            <label for="new-card-holder">Titular</label>
+            <input type="text" name="new-card-holder" id="new-card-holder" placeholder="Titular">
+        </div>
+        <button type="submit">Guardar</button>
+    </form>
+</div>
+</body>
+</html>

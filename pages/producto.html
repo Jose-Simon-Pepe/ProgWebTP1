@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Producto</title>
+    <script src="https://kit.fontawesome.com/c3af30a602.js" crossorigin="anonymous"></script>
 </head>
 
-<!--todo: Menú-->
-<!--todo: Galería productos-->
-<!--todo: Footer con 3 columnas-->
+<!--todo: Incorporar fuentes para los íconos de carrito y svg para logo de marca-->
+<!--todo: Crear un estilo general del sitio en base al tp-->
+<!--todo: Crear un estilo general del sitio en base al tp-->
 
 <body>
 <header>
     <div class="header__div">
         <a href="../index.html"><img src="../images/logo.png" alt="logo" draggable="false"
-                                     class="footer__horarios__logo--grande"></a>
+                                     class="header__logo--grande"></a>
         <input type="text" name="query" placeholder="Buscar...">
-        <a href="carrito.html"><img src="../images/carrito_compras.png" alt="carrito" draggable="false"></a>
+        <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
     </div>
     <ul class="header__ul">
         <li>Home</li>
@@ -34,8 +35,7 @@
     <div class="agregar-carrito">
         <input type="number" name="cantidad-producto" id="cantidad-producto">
         <button class="agregar-carrito__button-agregar">Agregar</button>
-        <a href="carrito.html"><img src="../images/carrito_compras.png" alt="carrito" draggable="false"
-                                    class="agregar-carrito__logo-pequenio"></a>
+        <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
     </div>
 </main>
 <aside class="productos-similares">
@@ -66,19 +66,24 @@
         <a href="../index.html"><img src="../images/logo.png" alt="logo" draggable="false"></a>
         <a href="../index.html"><img src="../images/logo.png" alt="logo" draggable="false"
                                      class="horarios__logo--pequenio"></a>
+        <i class="fa-solid fa-clock"></i>
         <p>Dias que estamos</p>
         <p>Horarios que estamos</p>
     </div>
     <div class="footer__datos-grupo">
-        <h4>Datos del grupo</h4>
-        <p>Nombre y dni</p>
-        <p>Nombre y dni</p>
+        <h4>Datos del grupo:</h4>
+        <p>Salva Guittan Jesica Belen | dni</p>
+        <p>Cravotta Giuliana Milena | dni</p>
+        <p>José Simón Pepé Siarría | dni</p>
     </div>
     <div class="footer__redes-sociales">
         <h4>Redes sociales</h4>
-        <a href="../index.html"><img src="../images/redSocial1.png" alt="redSocial" draggable="false" class="redes-sociales__logo-red"></a>
-        <a href="../index.html"><img src="../images/redSocial2.png" alt="redSocial" draggable="false" class="redes-sociales__logo-red"></a>
-        <a href="../index.html"><img src="../images/redSocial3.png" alt="redSocial" draggable="false" class="redes-sociales__logo-red"></a>
+        <a href="../index.html"><img src="../images/redSocial1.png" alt="redSocial" draggable="false"
+                                     class="redes-sociales__logo-red"></a>
+        <a href="../index.html"><img src="../images/redSocial2.png" alt="redSocial" draggable="false"
+                                     class="redes-sociales__logo-red"></a>
+        <a href="../index.html"><img src="../images/redSocial3.png" alt="redSocial" draggable="false"
+                                     class="redes-sociales__logo-red"></a>
     </div>
 </footer>
 </body>
