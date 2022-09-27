@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/logo_unlam2.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/logo_unlam2.png">
     <title>Mi carrito</title>
 </head>
 <body>
     <header class="contenedor-header">
         <div>
-            <img class="logo-header" src="img/logo_unlam2.png" alt="logo-unlam">
+            <img class="logo-header" src="../images/logo_unlam2.png" alt="logo-unlam">
         </div>
         <div>
             <form action="#" method="get"></form>
@@ -51,7 +51,7 @@
                 <ul class="listado-carrito">
                     <li class="articulo-en-carrito">
                         <div class="titulo-compra-img">
-                            <img src="img/productos/gaseosa-2.jpg" alt="">
+                            <img src="../images/productos/gaseosa-2.jpg" alt="Gaseosa Cunnington 2.25L">
                             <p>Gaseosa Cunnington 2.25L</p>
                         </div>
 
@@ -62,9 +62,9 @@
                                 <p>Subtotal</p>
                             </div>
                             <div class="valores-de-compra">
-                                <p>$100</p>
+                                <p>$120</p>
                                 <input class="cuadro-cant" id="cantidad" type="number" name="cantidad" min="1" max="100" value="1">
-                                <p>$200</p>
+                                <p>$120</p>
                                 <button class="icono-tacho" ><i class="fa-solid fa-trash"></i></button>
                             </div>
                         </div>
@@ -72,8 +72,8 @@
                     </li>
                     <li class="articulo-en-carrito">
                         <div class="titulo-compra-img">
-                            <img src="img/productos/gaseosa-2.jpg" alt="">
-                            <p>Gaseosa Cunnington 2.25L</p>
+                            <img src="../images/productos/agua-1.jpg" alt="Agua Villa del Sur Bidón 6.25L">
+                            <p>Agua Villa del Sur Bidón 6.25</p>
                         </div>
 
                         <div class="titulo-compra1">
@@ -83,9 +83,9 @@
                                 <p>Subtotal</p>
                             </div>
                             <div class="valores-de-compra">
-                                <p>$100</p>
+                                <p>$260</p>
                                 <input class="cuadro-cant" id="cantidad" type="number" name="cantidad" min="1" max="100" value="1">
-                                <p>$200</p>
+                                <p>$260</p>
                                 <button class="icono-tacho" ><i class="fa-solid fa-trash"></i></button>
                             </div>
                         </div>
@@ -93,8 +93,8 @@
                     </li>
                     <li class="articulo-en-carrito">
                         <div class="titulo-compra-img">
-                            <img src="img/productos/gaseosa-2.jpg" alt="">
-                            <p>Gaseosa Cunnington 2.25L</p>
+                            <img src="../images/productos/jugo-2.jpg" alt="Citric jugo de naranja 1L">
+                            <p>Citric jugo de naranja 1L</p>
                         </div>
 
                         <div class="titulo-compra1">
@@ -106,7 +106,7 @@
                             <div class="valores-de-compra">
                                 <p>$100</p>
                                 <input class="cuadro-cant" id="cantidad" type="number" name="cantidad" min="1" max="100" value="1">
-                                <p>$200</p>
+                                <p>$100</p>
                                 <button class="icono-tacho" ><i class="fa-solid fa-trash"></i></button>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                     <!--TOTAL A PAGAR-->
                     <li class="total-a-pagar">
                         <p id="total">Total a pagar </p>
-                        <p> $300</p>
+                        <p> $480</p>
                     </li>
                     
                 </ul>
@@ -150,40 +150,51 @@
                             <label for="chk">Otra tarjeta</label>
                             <input type="checkbox" class="chk">
                             <div class="ocultar">
-                                <label for="tarjeta">Numero de tarjeta</label>
-                                <input id="tarjeta" type="tel" name="tarjeta" >
-        
-                                <label for="vencimiento<">Vencimiento</label>
-                                <input id="vencimiento<" type="tel" name="vencimiento" >
-        
-                                <label for="Vencimiento">Código</label>
-                                <input id="tarjeta" type="tel" name="tarjeta" >
-        
-                                <label for="titular">Nombre del titular</label>
-                                <input id="titular" type="text" name="tarjeta" >
+                                <div>
+                                    <label for="tarjeta">Numero de tarjeta</label>
+                                    <input id="tarjeta" type="tel" name="tarjeta" pattern="[0-9]{16}" title="El número de tarjeta debe ser de 16 dígitos" >
+                                </div>
+
+                                <div>
+                                    <label for="codigo">Código</label>
+                                    <input class="box-peque" id="codigo" type="tel" name="codigo" placeholder="Cód." pattern="[0-9]{3}" title="El código debe ser númerico y 3 dígitos">
+
+                                    <label for="vencimiento<">Vencimiento</label>
+                                    <input class="box-peque" id="vencimiento" type="tel" name="vencimiento" >
+
+                                </div>
+
+                                <div>
+                                    <label for="titular">Nombre del titular</label>
+                                    <input id="titular" type="text" name="titular" >
+
+                                </div>
+                    
                             </div>  
-                            <label for="direccion">Direcciones guardadas</label>
-                            <select name="direccion" id="direccion" required>
-                                <option value="">Seleccione una domicilio</option>
-                                <option value="casa-1">Avenida Siempreviva 222</option>
-                                <option value="casa-2" selected>Avenida Siempreviva 555</option>
-                
-                            </select> 
-        
+
+                            <div>
+                                <label for="direccion">Direcciones guardadas</label>
+                                <select name="direccion" id="direccion" required>
+                                    <option value="">Seleccione una domicilio</option>
+                                    <option value="casa-1">Avenida Siempreviva 222</option>
+                                    <option value="casa-2" selected>Avenida Siempreviva 555</option>
+                                </select> 
+                            </div>
+                        
                             <label for="chk">Otra Dirección</label>
                             <input type="checkbox" class="chk">
+
                             <div class="ocultar">
                                 <label for="direccion">Domicilio</label>
                                 <input id="direccion" type="tel" name="direccion" >
                             </div>
-        
-                            <input type="submit" value="Pagar">
+
+                            <p class="boton-popup-pagar">
+                                <input class="boton-pagar" type="submit" value="Pagar">
+                            </p>
         
                         </form>
                         
-                        
-                        
-                       
                     </div>
                 </div>
             </div>
@@ -194,7 +205,7 @@
 
     <footer class="contenedor-footer">
         <div>
-            <img class= "img" src="img/logo_unlam2.png" alt="logo-unlam">
+            <img class= "img" src="../images/logo_unlam2.png" alt="logo-unlam">
             <p>Lunes a Sábado</p>
             <p>de 8 a 14hs. y de 16 a 20hs.</p>
         </div>
@@ -206,8 +217,8 @@
 
         </div>
         <div>
-            <span>Seguinos en: </span>
-            <p>
+            <p>Seguinos en: </p>
+            <p class="iconos-red-social">
                 <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </p>

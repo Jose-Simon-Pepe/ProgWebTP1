@@ -41,9 +41,6 @@ input[type=number]::-webkit-inner-spin-button {
     justify-content: space-around;
     align-items: center;
 }
-.contenedor-header div{
-    /*border: 1px solid red;*/
-}
 
 .buscador{
     padding: 10px;
@@ -89,7 +86,6 @@ input[type=number]::-webkit-inner-spin-button {
     padding-left: 130px;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid green;
     
 }
 .contenedor-producto article{
@@ -130,9 +126,13 @@ input[type=number]::-webkit-inner-spin-button {
     width: 100px;
 }
 
+.iconos-red-social i{
+    color: #fff;
+    font-size: 30px;
+}
+
 .mis-datos{ /*main de Mi-cuenta*/
     width: 55%;
-    /*border: 1px solid black;*/
 }
 .fotoynombre{
     display: flex;
@@ -227,11 +227,11 @@ input[type=number]::-webkit-inner-spin-button {
     margin: 30px 170px;
     height: 255px;
     /*border: 1px solid red;*/
-    background-image: url(../img/maggie-header-compra2.png);
+    background-image: url(../images/maggie-header-compra2.png);
     background-size: cover;
 }
 .titulo-carrito, .listado-carrito, .zona-boton-pagar{
-    margin: 10px 170px; /*7777777777777*/
+    margin: 10px 170px; 
 
 }
 
@@ -263,7 +263,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .listado-carrito li{
-    /*border: 1px solid green;*/
     display: flex;
     margin-bottom: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
@@ -359,13 +358,13 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 #popupBody{
-    width: 46%;
+    width: 30%;
     background: #fff; 
     padding: 2%;
     position: relative;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgb(253, 253, 253);
-    margin: 20% auto;
+    box-shadow: 0 0 10px #fdfdfd;
+    margin: 20px auto;
     /*transition: all 10s ease-in-out;*/
 }
 
@@ -381,12 +380,20 @@ input[type=number]::-webkit-inner-spin-button {
 
 .ocultar {
     display: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .chk:checked + .ocultar {
     display: block;
 }
-/********/
+/*********************************/
+label, input{
+    margin-bottom: 9px;
+    margin-top: 9px;
+    
+}
+
 .titulo-popup{
     display: flex;
     align-items: center;
@@ -394,4 +401,12 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .titulo-popup i{
     font-size: 30px;
+}
+
+.box-peque{
+    width: 40px;
+}
+
+.boton-popup-pagar{
+    text-align: center;
 }
