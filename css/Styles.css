@@ -1,23 +1,8 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-
-p{
-    font-family: Arial, sans-serif;
-}
-
-body{
-    background-color:lightgray;
-}
-
-header{
-    background-color: gray;
-}
-
-nav,footer{
-    background-color: darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*header*/
@@ -47,4 +32,291 @@ nav,footer{
     transform: scaleY(1.2);
     background-color: greenyellow;
     box-shadow: darkslategray -2px 0px 10px;
+}
+
+nav,footer{
+    background-color: darkslategray;
+}
+
+/*Logo*/
+.logo {
+    width: 17vh;
+    height: auto;
+}
+
+.header__pri {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color: #333;
+}
+
+.buscar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vh;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.buscador {
+    margin: 0 10px 0 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: grey;
+    color: white;
+}
+
+.placeholder {
+    color: rgb(166, 166, 166);
+}
+
+/* main */
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    overflow: hidden;
+}
+
+
+button {
+    
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: grey;
+    color: #fff;
+    transition: background-color 0.4s ease 0;
+
+}
+
+.navMenu {
+    display: block;
+
+}
+
+.navMenu ul {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 10px 0;
+}
+
+.navMenu ul li {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #333;
+    background-color: #333;
+}
+
+.navMenu ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.navMenu ul li a:hover {
+    background-color:grey;
+}
+
+
+/*Galeria*/
+h1 {
+    color: black;
+    font-size: 2em;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.categorias {
+    display: block;
+    justify-content: center;
+    padding: 28px;
+    gap: 1em;
+}
+
+.categoria {
+    width: 150px;
+    height: 200px;
+    background-color: #333;
+    border-radius: 10px;
+    outline: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+    padding: 1em;
+
+}
+
+.categoriaTitle {
+    color: white;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-size: 20px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .5);
+}
+
+.categoriaImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .6;
+    transition: transform .75s;
+}
+
+.categoria:hover .categoriaImg {
+    transform: scale(1.05);
+}
+
+
+@media screen and (min-width:48em) {
+    .categorias {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .categoria {
+        width: calc(50% - 1em);
+    }
+}
+
+@media screen and (min-width:60em) {
+    .categoria {
+        width: calc(33% - 1em);
+    }
+}
+
+@media screen and (min-width:80em) {
+    .categoria {
+        width: calc(33% - 1em);
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+    align-items: center;
+    background-color: #333;
+}
+.footer__redes{
+    padding: 10px 20px 10px 20px;
+    align-items: center;
+}
+.footer__datos{
+   display: block;
+}
+/*Iconos*/
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background-color: #E1306C;
+    color: white;
+}
+
+/*inputs*/
+.loginBox{
+    background-color: grey;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+.loginBox h1{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.loginBox a{
+    text-decoration: none;
+    color: rgb(138, 22, 22);
+}
+.usuario{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+.usuario input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 17px;
+    color: #fff;
+}
+.usuario input:valid,
+.usuario input:focus{
+    outline: 0;
+    border-bottom-color:rgb(138, 22, 22) ;
+
+}
+.usuario label{
+    position: absolute;
+    color: #fff;
+}
+.olvido{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(138, 22, 22);
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:active{
+    transform: scale(0.95);
+}
+.registro{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
 }
