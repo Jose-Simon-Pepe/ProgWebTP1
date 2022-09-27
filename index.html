@@ -1,0 +1,130 @@
+<!--
+todo:
+a. Menú para navegar las distintas secciones del sitio.
+b. Banner con imágenes de los productos (poner pocas imagenes)
+c. Botones de Categorías de Producto
+d. Productos más vendidos que incluya precio y botón de agregarlo al carrito de
+compras.
+e. Carrusel de formas de pago
+f. Footer a tres columnas, en las cuales se mostrará la siguiente información,
+i. Logo y horarios de atención
+ii. Datos del grupo (Nombre y DNI de cada integrante)
+iii. Links a redes sociales
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/c3af30a602.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <div class="header__div">
+        <a href="../index.html"><img src="../images/logo.png" alt="logo" draggable="false"
+                                     class="header__logo--grande"></a>
+        <input type="text" name="query" placeholder="Buscar...">
+        <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+    <ul class="header__ul">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Categorias</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Mi cuenta</a></li>
+    </ul>
+</header>
+
+<aside>
+    <!--Banner de productos-->
+    <i class="fa-solid fa-arrow-left"></i>
+    <div class="main__producto"></div>
+    <i class="fa-solid fa-arrow-right"></i>
+</aside>
+
+<main class="index__main">
+    <section>
+        <h2>Categorias</h2>
+        <article>
+            <span class="producto__nombre">Categoría 1</span>
+        </article>
+        <article>
+            <span class="producto__nombre">Categoría 2</span>
+        </article>
+        <article>
+            <span class="producto__nombre">Categoría 3</span>
+        </article>
+    </section>
+</main>
+
+<aside class="index__main">
+    <section>
+        <h2>Productos mas vendidos</h2>
+        <article class="producto">
+            <span class="producto__nombre">Categoría 1</span>
+            <span class="tarjeta-producto-similar precio-flotante">$500000</span></div>
+            <div>
+                <p></p>
+                <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </article>
+        <article class="producto">
+            <span class="producto__nombre">Categoría 2</span>
+            <span class="tarjeta-producto-similar precio-flotante">$500000</span></div>
+            <div>
+                <p></p>
+                <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </article>
+        <article class="producto">
+            <span class="producto__nombre">Categoría 3</span>
+            <span class="tarjeta-producto-similar precio-flotante">$500000</span></div>
+            <div>
+                <p></p>
+                <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </article>
+    </section>
+</aside>
+
+<aside>
+    <!--Carrousel de pago-->
+    <h2>Formas de pago</h2>
+    <i class="fa-solid fa-arrow-left"></i>
+    <img class="carrousel__producto">
+    <img class="carrousel__producto">
+    <img class="carrousel__producto">
+    <i class="fa-solid fa-arrow-right"></i>
+</aside>
+
+
+<footer class="footer">
+    <div class="footer__horarios">
+        <!--<a href="../index.html"><img src="../images/logo.png" alt="logo" draggable="false"></a>-->
+        <a href="../index.html"><img src="../images/logo.png" alt="logo" draggable="false"
+                                     class="horarios__logo--pequenio"></a>
+        <i class="fa-solid fa-clock"></i>
+        <p>Dias que estamos</p>
+        <p>Horarios que estamos</p>
+    </div>
+    <div class="footer__datos-grupo">
+        <h4>Datos del grupo:</h4>
+        <p>Salva Guittan Jesica Belen | dni</p>
+        <p>Cravotta Giuliana Milena | dni</p>
+        <p>José Simón Pepé Siarría | dni</p>
+    </div>
+    <div class="footer__redes-sociales">
+        <h4>Redes sociales</h4>
+        <a href="../index.html"><img src="../images/redSocial1.png" alt="redSocial" draggable="false"
+                                     class="redes-sociales__logo-red"></a>
+        <a href="../index.html"><img src="../images/redSocial2.png" alt="redSocial" draggable="false"
+                                     class="redes-sociales__logo-red"></a>
+        <a href="../index.html"><img src="../images/redSocial3.png" alt="redSocial" draggable="false"
+                                     class="redes-sociales__logo-red"></a>
+    </div>
+</footer>
+
+</body>
+</html>

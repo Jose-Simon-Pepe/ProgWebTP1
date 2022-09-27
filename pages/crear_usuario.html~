@@ -1,0 +1,27 @@
+<form>
+	<img src="...">
+	<label for="email">Email</label>
+	<input type="email" id="email" autofocus>
+
+ 	<label for="nombre">Nombre</label>
+        <input type="nombre" id="nombre">
+	
+	<label for="apellido">Apellido</label>
+	<input type="apellido" id="apellido">
+	
+	<label for="contrasenia">Contraseña</label>
+	<input type="contrasenia" id="contrasenia">
+	
+	<label for="contraseniaRepetida">Repetir contraseña</label>
+        <input type="contraseniaRepetida" id="contraseniaRepetida">
+
+	<div class="form__buttons">
+		<button type="button">Cancelar</button>
+		<button type="button">Guardar</button>
+	</div>
+
+</form>
+
+
+
+	
