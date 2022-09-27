@@ -14,7 +14,6 @@ header {
     justify-content: space-between;
     padding: 20px;
     align-items: center;
-    
 }
 body{
     background-color: #333;
@@ -51,8 +50,8 @@ main{
     border: 0;
     border-bottom: 2px solid #fff;
     display: block;
-    width: 100%;
-    padding: 15px 0;
+    width: 100%;  
+    padding: 14px 0;
     font-size: 17px;
     color: #fff;
 }
@@ -63,8 +62,9 @@ main{
 
 }
 .usuario label{
-    position: absolute;
+    
     color: #fff;
+    
 }
 .olvido{
     margin-bottom: 15px;
