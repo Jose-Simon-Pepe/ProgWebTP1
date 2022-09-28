@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/logo_unlam2.png">
+    <link rel="stylesheet" href="../css/share.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <title>Mi carrito</title>
+</head>
+<body>
+    <header>
+        <div class="header__pri">
+            <img class="logo" src="../img/Logo.png" alt="logo">
+            <div class="buscar">
+                <span class="material-icons">
+                    search
+                </span>
+                <input class="buscador" type="text" name="" id="buscar" placeholder="Buscar productos">
+            </div>
+            <div class="carrito">
+                <button>
+                    <span class="material-icons">
+                        shopping_cart
+                    </span>
+                </button>
+            </div>
+        </div>
+        <nav class="navMenu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Mi Cuenta</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <article class="fondo-maggie">
+                <!--maggui comprando-->
+            </article>
+
+            <article class="titulo-carrito">
+                    <p class="icon-mi-carrito"><i class="fa-solid fa-cart-shopping"></i></p>
+                    <h2> Mi carrito</h2>
+            </article>
+<!--********************************************* -->
+            <article>
+                <ul class="listado-carrito">
+                    <li class="articulo-en-carrito">
+                        <div class="titulo-compra-img">
+                            <img src="../images/productos/gaseosa-2.jpg" alt="Gaseosa Cunnington 2.25L">
+                            <p>Gaseosa Cunnington 2.25L</p>
+                        </div>
+
+                        <div class="titulo-compra1">
+                            <div class="subtitulo-compra">
+                                <p>Precio</p> 
+                                <p>Cantidad</p>
+                                <p>Subtotal</p>
+                            </div>
+                            <div class="valores-de-compra">
+                                <p>$120</p>
+                                <input class="cuadro-cant" id="cantidad" type="number" name="cantidad" min="1" max="100" value="1">
+                                <p>$120</p>
+                                <button class="icono-tacho" ><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                    </li>
+                    <li class="articulo-en-carrito">
+                        <div class="titulo-compra-img">
+                            <img src="../images/productos/agua-1.jpg" alt="Agua Villa del Sur Bidón 6.25L">
+                            <p>Agua Villa del Sur Bidón 6.25</p>
+                        </div>
+
+                        <div class="titulo-compra1">
+                            <div class="subtitulo-compra">
+                                <p>Precio</p> 
+                                <p>Cantidad</p>
+                                <p>Subtotal</p>
+                            </div>
+                            <div class="valores-de-compra">
+                                <p>$260</p>
+                                <input class="cuadro-cant" id="cantidad" type="number" name="cantidad" min="1" max="100" value="1">
+                                <p>$260</p>
+                                <button class="icono-tacho" ><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                    </li>
+                    <li class="articulo-en-carrito">
+                        <div class="titulo-compra-img">
+                            <img src="../images/productos/jugo-2.jpg" alt="Citric jugo de naranja 1L">
+                            <p>Citric jugo de naranja 1L</p>
+                        </div>
+
+                        <div class="titulo-compra1">
+                            <div class="subtitulo-compra">
+                                <p>Precio</p> 
+                                <p>Cantidad</p>
+                                <p>Subtotal</p>
+                            </div>
+                            <div class="valores-de-compra">
+                                <p>$100</p>
+                                <input class="cuadro-cant" id="cantidad" type="number" name="cantidad" min="1" max="100" value="1">
+                                <p>$100</p>
+                                <button class="icono-tacho" ><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                    </li>
+                    <!--TOTAL A PAGAR-->
+                    <li class="total-a-pagar">
+                        <p id="total">Total a pagar </p>
+                        <p> $480</p>
+                    </li>
+                    
+                </ul>
+    
+            </article>
+
+            <article class="zona-boton-pagar">
+                <a href="#popup-pagar">Pagar</a>
+            </article>
+<!------------------------POP UP PAGAR ------------------------------------>
+            <div id="popup-pagar" class="overlay">
+                <div id="popupBody">
+                    <div class="titulo-popup">
+                        <i class="fa-regular fa-credit-card"></i> 
+                        <h2>Pagar</h2>
+                    </div>
+                    
+                    <a id= "cerrar" href="#">&times;</a>
+
+                    <div class="popupContent">
+                        <form action="#" method="post">
+                            <div>
+                                <label for="tarjeta">Tarjetas guardadas</label>
+                                <select name="tarjeta" id="tarjeta" required>
+                                    <option value="">Seleccione una tarjeta</option>
+                                    <option value="1">HSBC Bank S.A. Mastercad</option>
+                                    <option value="2" selected>Banco Macro S.A. Visa</option>
+                                    <option value="3">Banco Galicia S.A. Visa</option>
+                                </select>
+                            </div>
+                            
+                            <label for="chk">Otra tarjeta</label>
+                            <input type="checkbox" class="chk">
+                            <div class="ocultar">
+                                <div>
+                                    <label for="tarjeta">Numero de tarjeta</label>
+                                    <input id="tarjeta" type="tel" name="tarjeta" pattern="[0-9]{16}" title="El número de tarjeta debe ser de 16 dígitos" >
+                                </div>
+
+                                <div>
+                                    <label for="codigo">Código</label>
+                                    <input class="box-peque" id="codigo" type="tel" name="codigo" placeholder="Cód." pattern="[0-9]{3}" title="El código debe ser númerico y 3 dígitos">
+
+                                    <label for="vencimiento<">Vencimiento</label>
+                                    <input class="box-peque" id="vencimiento" type="tel" name="vencimiento" >
+
+                                </div>
+
+                                <div>
+                                    <label for="titular">Nombre del titular</label>
+                                    <input id="titular" type="text" name="titular" >
+
+                                </div>
+                    
+                            </div>  
+
+                            <div>
+                                <label for="direccion">Direcciones guardadas</label>
+                                <select name="direccion" id="direccion" required>
+                                    <option value="">Seleccione una domicilio</option>
+                                    <option value="casa-1">Avenida Siempreviva 222</option>
+                                    <option value="casa-2" selected>Avenida Siempreviva 555</option>
+                                </select> 
+                            </div>
+                        
+                            <label for="chk">Otra Dirección</label>
+                            <input type="checkbox" class="chk">
+
+                            <div class="ocultar">
+                                <label for="direccion">Domicilio</label>
+                                <input id="direccion" type="tel" name="direccion" >
+                            </div>
+
+                            <p class="boton-popup-pagar">
+                                <input class="boton-pagar" type="submit" value="Pagar">
+                            </p>
+        
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+<!--*********************************************-->
+        </section>
+
+    </main>
+
+    <footer class="contenedor-footer">
+        <div>
+            <img class= "img" src="../images/logo_unlam2.png" alt="logo-unlam">
+            <p>Lunes a Sábado</p>
+            <p>de 8 a 14hs. y de 16 a 20hs.</p>
+        </div>
+        <div>
+            <p>Datos del grupo:</p>
+            <p>Cravota, Giuliana</p>
+            <p>Pepé, José Simón</p>
+            <p>Salva Guitian, Jesica Belén</p>
+
+        </div>
+        <div>
+            <p>Seguinos en: </p>
+            <p class="iconos-red-social">
+                <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </p>
+            
+        </div>
+
+    </footer>
+    
+</body>
+</html>

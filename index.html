@@ -1,0 +1,143 @@
+<!--
+todo:
+a. Menú para navegar las distintas secciones del sitio.
+b. Banner con imágenes de los productos (poner pocas imagenes)
+c. Botones de Categorías de Producto
+d. Productos más vendidos que incluya precio y botón de agregarlo al carrito de
+compras.
+e. Carrusel de formas de pago
+f. Footer a tres columnas, en las cuales se mostrará la siguiente información,
+i. Logo y horarios de atención
+ii. Datos del grupo (Nombre y DNI de cada integrante)
+iii. Links a redes sociales
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    
+    <script src="https://kit.fontawesome.com/c3af30a602.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/share.css">
+</head>
+<body>
+<header>
+    <div class="header__pri">
+        <img class="logo" src="img/Logo.png" alt="logo">
+        <div class="buscar">
+            <span class="material-icons">
+                search
+            </span>
+            <input class="buscador" type="text" name="" id="buscar" placeholder="Buscar productos">
+        </div>
+        <div class="carrito">
+            <button>
+                <span class="material-icons">
+                    shopping_cart
+                </span>
+            </button>
+        </div>
+    </div>
+    <nav class="navMenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categorías</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Mi Cuenta</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<aside>
+    <!--Banner de productos-->
+    <i class="fa-solid fa-arrow-left"></i>
+    <div class="main__producto"></div>
+    <i class="fa-solid fa-arrow-right"></i>
+</aside>
+
+<main class="index__main">
+    <section>
+        <h2>Categorias</h2>
+        <article>
+            <span class="producto__nombre">Categoría 1</span>
+        </article>
+        <article>
+            <span class="producto__nombre">Categoría 2</span>
+        </article>
+        <article>
+            <span class="producto__nombre">Categoría 3</span>
+        </article>
+    </section>
+</main>
+
+<aside class="index__main">
+    <section>
+        <h2>Productos mas vendidos</h2>
+        <article class="producto">
+            <span class="producto__nombre">Categoría 1</span>
+            <span class="tarjeta-producto-similar precio-flotante">$500000</span></div>
+            <div>
+                <p></p>
+                <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </article>
+        <article class="producto">
+            <span class="producto__nombre">Categoría 2</span>
+            <span class="tarjeta-producto-similar precio-flotante">$500000</span></div>
+            <div>
+                <p></p>
+                <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </article>
+        <article class="producto">
+            <span class="producto__nombre">Categoría 3</span>
+            <span class="tarjeta-producto-similar precio-flotante">$500000</span></div>
+            <div>
+                <p></p>
+                <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </article>
+    </section>
+</aside>
+
+<aside>
+    <!--Carrousel de pago-->
+    <h2>Formas de pago</h2>
+    <i class="fa-solid fa-arrow-left"></i>
+    <img class="carrousel__producto">
+    <img class="carrousel__producto">
+    <img class="carrousel__producto">
+    <i class="fa-solid fa-arrow-right"></i>
+</aside>
+
+
+<footer class="contenedor-footer">
+    <div>
+        <img class= "img" src="images/logo_unlam2.png" alt="logo-unlam">
+        <p>Lunes a Sábado</p>
+        <p>de 8 a 14hs. y de 16 a 20hs.</p>
+    </div>
+    <div>
+        <p>Datos del grupo:</p>
+        <p>Cravota, Giuliana</p>
+        <p>Pepé, José Simón</p>
+        <p>Salva Guitian, Jesica Belén</p>
+
+    </div>
+    <div>
+        <p>Seguinos en: </p>
+        <p class="iconos-red-social">
+            <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </p>
+        
+    </div>
+
+</footer>
+
+</body>
+</html>
