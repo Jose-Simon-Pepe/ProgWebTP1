@@ -1,0 +1,92 @@
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+
+#popupBody{
+    width: 30%;
+    background: #fff; 
+    padding: 2%;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #fdfdfd;
+    margin: 20px auto;
+    /*transition: all 10s ease-in-out;*/
+}
+
+#cerrar{
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f00;
+    text-decoration: none;
+}
+
+.ocultar {
+    display: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.chk:checked + .ocultar {
+    display: block;
+}
+/*********************************/
+label, input{
+    margin-bottom: 9px;
+    margin-top: 9px;
+    
+}
+
+.titulo-popup{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.titulo-popup i{
+    font-size: 30px;
+}
+
+.box-peque{
+    width: 40px;
+}
+
+.boton-popup-pagar{
+    text-align: center;
+}
+
+
+.boton-pagar{
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px; 
+    background-color:#0076C6;
+}
+
+.boton-pagar:hover{ 
+    background-color: #3CA5EA;
+    color: #fff;
+}
+
+.boton-pagar:active { 
+    background: rgb(230, 228, 228); 
+    color: #fff; 
+}

@@ -1,0 +1,138 @@
+
+body{
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+
+}
+.fondo-maggie{
+    margin: 30px 170px;
+    height: 255px;
+    /*border: 1px solid red;*/
+    background-image: url(../images/maggie-header-compra2.png);
+    background-size: cover;
+}
+.titulo-carrito, .listado-carrito, .zona-boton-pagar{
+    margin: 10px 170px; 
+
+}
+.titulo-carrito{
+    /*border: 1px solid red;*/
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(63, 63, 63);
+    color: #fff;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.titulo-carrito p, h2{ /*hijos del titulo*/
+    padding-left: 10px;
+    font-size: 26px;
+}
+
+.titulo-compra-img img{
+    width: 110px;
+}
+
+.listado-carrito{
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap (default no)*/
+}
+
+.listado-carrito li{
+    display: flex;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
+    background-color: #fff;
+    border-radius: 20px;
+}
+.titulo-compra-img{
+    
+    display: flex;
+    align-items: center;
+}
+.titulo-compra-img img{
+    width: 80px;
+}
+.titulo-compra-img p{
+    font-weight:600;
+    font-size: 15px;
+}
+
+.titulo-compra1{
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    width:100%;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+.subtitulo-compra{
+    display:flex;
+    height: 55px;
+    width: 77%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.valores-de-compra{
+    display:flex;
+    justify-content: space-around;
+    height: 55px;
+    align-items: center;
+}
+
+.total-a-pagar p{
+    font-weight: bold;
+    font-size:larger;
+    padding: 10px;
+}
+#total{
+    margin-right: 55%;
+    padding-left: 10px;
+}
+.zona-boton-pagar{
+    text-align: center;
+    padding: 10px;
+
+}
+
+.zona-boton-pagar a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 10px; 
+    background-color:#0076C6;
+}
+
+.zona-boton-pagar a:hover{ 
+    background-color: #3CA5EA;
+    color: #fff;
+}
+
+.zona-boton-pagar a:active { 
+    background: rgb(230, 228, 228); 
+    color: #fff; 
+}
+
+input[type=number]{
+    text-align: center;
+    
+}
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+
+.cuadro-cant{
+    width: 45px;
+}
+
+.img{
+    width: 100px;
+}
