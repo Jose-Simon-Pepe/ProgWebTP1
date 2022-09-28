@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/mi-cuenta.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/direcciones.css">
-    <!--Faltaria el css de metodos de pago-->
 
 
     <title>Mi cuenta</title>
@@ -145,18 +144,21 @@
          <!------------------------POP UP NUEVA DIRECCION GIULI------------------------------------>
          <div id="popup-direccion" class="center">
             <form action="#">
-                <a id="cerrar" href="#">&times;</a>
-                <h1 class="misDirecciones">Nueva Dirección</h1>
+                <div class="popup-header">
+                    <p class="misDirecciones">Nueva Dirección</p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a id="cerrar" href="#">&times;</a>
+                </div>
                 <div class="form-element">
                     <label for="alias">Alias</label>
-                    <input type="text" id="alias" name="alias" placeholder="Alias"><br>
+                    <input type="text" id="alias" name="alias" placeholder="Alias">
                 </div>
                 <div class="form-element">
                     <label for="provincia">Provincia</label>
                     <select name="provincia" id="provincia">
                         <option value="0">Seleccionar Provincia</option>
                         <option value="1">Buenos Aires</option>
-                    </select><br>
+                    </select>
                 </div>
                 <div class="form-element">
                     <label for="localidad">Localidad</label>
@@ -165,26 +167,26 @@
                         <option value="1">La Matanza</option>
                         <option value="1">Morón</option>
                         <option value="1">Ramos Mejia</option>
-                    </select><br>
+                    </select>
                 </div>
                 <div class="form-element">
                     <label for="direccion">Direccion</label>
-                    <input type="text" id="direccion" name="direccion" placeholder="Direccion"><br>
+                    <input type="text" id="direccion" name="direccion" placeholder="Direccion">
                 </div>
                 <div class="form-element">
                     <label for="telefono">Telefono</label>
-                    <input type="text" id="telefono" name="telefono" placeholder="Telefono"><br>
+                    <input type="text" id="telefono" name="telefono" placeholder="Telefono">
                 </div>
                 <div class="form-element">
                     <label for="piso">Piso</label>
-                    <input type="text" name="piso" id="piso" placeholder="Piso"><br>
+                    <input type="text" name="piso" id="piso" placeholder="Piso">
                 </div>
                 <div class="form-element">
                     <label for="dto">Dto</label>
-                    <input type="text" name="dto" id="dto" placeholder="Dto"><br>
+                    <input type="text" name="dto" id="dto" placeholder="Dto">
                 </div>
-                <div class="form-element">
-                    <button>Submit</button>
+                <div class="form-element form-button">
+                    <button>Guardar</button>
                 </div>
             </form>
     
@@ -195,22 +197,24 @@
          <!------------------------POP UP NUEVO METODO DE PAGO ------------------------------------>
          <div class="center" id="mis-metodos-de-pago">
             <form action="#" method="get" enctype="text/plain">
-                <div class="form-element">
+                <div class="popup-header">
                     <p>Nueva tarjeta</p>
                     <i class="fa-solid fa-credit-card"></i>
+                    <a id="cerrar" href="#">&times;</a>
                 </div>
-                <a id="cerrar" href="#">&times;</a>
                 <div class="form-element">
                     <label for="new-card-alias">Alias</label>
                     <input type="text" name="new-card-alias" id="new-card-alias" placeholder="Alias" autofocus>
                 </div>
                 <div class="form-element">
-                    <label for="new-card-number">Número de tarjeta</label>
+                    <label for="new-card-number">Número</label>
                     <input type="text" name="new-card-number" id="new-card-number" placeholder="Número tarjeta">
                 </div>
                 <div class="form-element">
                     <label for="new-card-code">Código</label>
                     <input type="text" name="new-card-code" id="new-card-code" placeholder="Código" maxlength="3">
+                    </div>
+                    <div class="form-element">
                     <label for="new-card-expiration">Vencimiento</label>
                     <input type="text" name="new-card-expiration" id="new-card-expiration" placeholder="00-00" maxlength="5">
                 </div>
@@ -218,13 +222,15 @@
                     <label for="new-card-holder">Titular</label>
                     <input type="text" name="new-card-holder" id="new-card-holder" placeholder="Titular">
                 </div>
-                <button type="submit">Guardar</button>
+                <div class="form-element form-button">
+                    <button>Guardar</button>
+                </div>
             </form>
         </div>
          <!------------------------POP UP CREAR USUARIO-------------------------------------------->
          <form action="#">
             <img src="...">
-            <div class="form-element">
+            <div class="form-element popup-header">
             <label for="email">Email</label>
             <input type="email" id="email" autofocus>
             </div>

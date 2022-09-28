@@ -13,18 +13,37 @@
     background-color: #333;
     border: none;
     outline: none;
+margin-top: 0.5em;
 }
 
 .center {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    top: 50%;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
     background-color: rgba(0, 0, 0, 0.7);
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+}
+
+.popup-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.form-button{
+    text-align: right;
+    margin-top: 2%;
+}
+
+.center form{
+    width: 100%;
+    margin: 0%;
 }
 
 .center:target {
@@ -34,14 +53,11 @@
 
 
 #cerrar {
-    position: absolute;
-    top: 20px;
-    right: 30px;
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
     color: #F00;
-    transition: all 200ms;
+    order: 3;
 }
 
 .center h1 {
@@ -51,30 +67,44 @@
 }
 
 form {
-    border-radius: 15px;
     box-shadow: 0 0 5px #CCC;
     position: relative;
     background-color: grey;
-    width: 46%;
-    padding: 2%;
-    margin: 1% 28%;
+    padding:2%;
+    width: 100%;
+    margin: 0%;
+    border-radius: 15px;
 }
 
 
 
 .center form .form-element label {
     font-size: 14px;
+    text-align: center;
     color: #222;
+    display: inline;
+    order: 1;
+    padding-right: 1em;
+   text-align: right;
+   width: 30%;
 }
 
 .center form .form-element input[type="text"],
 .center form .form-element select {
     margin-top: 3px;
+    order: 2;
     display: block;
-    width: 100%;
     padding: 7px;
     outline: none;
     border: 1px solid #aaa;
     border-radius: 5px;
     height: 35px;
+    width: 50%;
+}
+
+.form-element{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0% auto;
 }
