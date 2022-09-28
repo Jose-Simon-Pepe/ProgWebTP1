@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:none;
+}
+body{
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+
+}
+h1{
+    text-align: center;
+}
+main{
+    margin: auto;
+    /*border: 1px solid black;*/
+}
+
+.mis-datos{ /*main de Mi-cuenta*/
+    width: 55%;
+}
+
+.fotoynombre{
+    display: flex;
+    align-items:center;
+}
+.fotoynombre div{
+    margin-right: 30px;
+    margin-top: 10px;
+
+}
+
+.foto-perfil{ /*imagen homero*/
+    height: 200px;
+}
+
+.subtitulo{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-right: 100px;
+    /*border: 1px solid pink;*/
+}
+.grilla{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing:none;
+    margin-top: 10px;
+}
+
+.item-direc{
+    background-color: #137fd9;
+    color: #fff;
+    flex: none;
+    width: calc(45% - 10px);
+    margin: 1px;
+    text-align: center;  
+    box-sizing: border-box;
+    padding: 3px;
+    /*border: 1px solid blue*/
+}
+.tachito, .espacio{
+    padding-left: 5px;
+    text-align: center;
+    /*border: 1px solid saddlebrown;*/
+}
+.icono-tacho{
+    height: 30px;
+    width: 25px;
+    text-align: center;
+    padding: 4px;
+}
+
+.icono-tacho i{
+    margin-right: 300px;
+    text-align: center;
+
+}
+.banco{
+    height: 30px;
+}
+.fondo-banco{
+    border: 1px solid #d9d9d9;
+    border-radius: px;
+    display: flex;
+    background-color: #fff;
+    margin: 10px;
+    padding: 15px;
+    justify-content:center;
+    align-items: center; 
+}
+
+.bold-grilla{
+    font-weight:600;
+}
+
+.boton-agregar{
+    background-color: lightgray;
+    color: #000;
+    padding: 7px;
+    border-radius: 5px; /*To do hace que la punta de mi rectangulo se vuelva redondeado como un boton*/
+    text-decoration: none;
+    border: 1px solid #aaaaaa;
+}
+
+.boton-agregar:hover{ 
+    background-color: #636363;
+    color: #fff;
+}
+
+.boton-agregar:active { 
+    background: rgb(230, 228, 228); 
+    color: #fff; 
+}
+
+.img{
+    width: 100px;
+}
+
+#boton-registro{
+    display: block;
+    text-align: center;
+    padding-top: 1em;
+}

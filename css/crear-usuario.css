@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-}
+    }
 
 .form-element button {
     padding: 10px 20px;
@@ -37,9 +37,6 @@ margin-top: 0.5em;
     transform: translate(-50%, -50%);
     min-width: 300px;
     background-color: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
 }
 
 .popup-header{
@@ -59,10 +56,6 @@ margin-top: 0.5em;
     margin: 0%;
 }
 
-.center:target {
-    visibility: visible;
-    opacity: 1;
-}
 
 
 #cerrar {
