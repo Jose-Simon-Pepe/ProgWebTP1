@@ -4,19 +4,14 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body{
+    background-color: #333;
+}
 .logo {
     width: 17vh;
     height: auto;
     margin-top: 7px;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    align-items: center;
-}
-body{
-    background-color: #333;
 }
 main{
     display: flex;
@@ -36,7 +31,7 @@ main{
     margin-bottom: 20px;
     margin-top: 20px;
 }
-.loginBox a{
+.loginBox .registro{
     text-decoration: none;
     color: rgb(138, 22, 22);
 }
@@ -80,14 +75,17 @@ main{
     font-size: 16px;
     border: 0;
     border-radius: 5px;
+    
+}
+
+.btn a{
     color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.btn:focus{
-    outline: 0;
-}
-.btn:active{
-    transform: scale(0.95);
-}
+
 .registro{
     margin-top: 15px;
     display: flex;

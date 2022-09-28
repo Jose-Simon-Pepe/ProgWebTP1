@@ -6,24 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nueva Dirección</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/stylePopUp.css">
+    <link rel="stylesheet" href="../css/direcciones.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
 </head>
 
 <body>
-    <div class="boton">
-        <button>Nueva Direccion</button>
-    </div>
-    <div class="center">
-   
-            <span class="material-symbols-outlined">
-                close
-            </span>
-       
-        <h1 class="misDirecciones">Nueva Dirección</h1>
+    <p><a href="#popup">Nueva Direccion</a></p>
+    <div id="popup" class="center">
+        
         <form action="#">
+            <a id="cerrar" href="#">&times;</a>
+            <h1 class="misDirecciones">Nueva Dirección</h1>
             <div class="form-element">
                 <label for="alias">Alias</label>
                 <input type="text" id="alias" name="alias" placeholder="Alias"><br>
@@ -33,17 +27,15 @@
                 <select name="provincia" id="provincia">
                     <option value="0">Seleccionar Provincia</option>
                     <option value="1">Buenos Aires</option>
-                    <option value="2">Cordoba</option>
-                    <option value="3">Santa Fe</option>
                 </select><br>
             </div>
             <div class="form-element">
                 <label for="localidad">Localidad</label>
                 <select name="localidad" id="localidad">
                     <option value="0">Seleccionar Localidad</option>
-                    <option value="1">Buenos Aires</option>
-                    <option value="1">Cordoba</option>
-                    <option value="1">Santa Fe</option>
+                    <option value="1">La Matanza</option>
+                    <option value="1">Morón</option>
+                    <option value="1">Ramos Mejia</option>
                 </select><br>
             </div>
             <div class="form-element">

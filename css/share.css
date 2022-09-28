@@ -1,0 +1,111 @@
+@import 'all.min.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*Logo*/
+.logo {
+    width: 17vh;
+    height: auto;
+}
+
+.header__pri {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color: #333;
+}
+
+.buscar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vh;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.buscador {
+    margin: 0 10px 0 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: grey;
+    color: white;
+}
+
+.placeholder {
+    color: rgb(166, 166, 166);
+}
+
+button {
+    
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: grey;
+    color: #fff;
+    transition: background-color 0.4s ease 0;
+
+}
+
+.navMenu {
+    display: block;
+
+}
+
+.navMenu ul {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 10px 0;
+}
+
+.navMenu ul li {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #333;
+    background-color: #333;
+}
+
+.navMenu ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.navMenu ul li a:hover {
+    background-color:grey;
+}
+/*Footer*/
+
+.contenedor-footer{
+    padding: 10px 20px 10px 20px;
+    margin-top: 40px;
+    display: flex;
+    justify-content:space-around;
+    background-color: #333;
+}
+
+.contenedor-footer p{
+    color: #fff;
+    
+}
+
+.iconos-red-social i{
+    color: #fff;
+    font-size: 30px;
+}

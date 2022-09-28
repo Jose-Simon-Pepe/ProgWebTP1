@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/stylePopUp.css">
+    <link rel="stylesheet" href="../css/logIn.css">
 </head>
 
 <body>
     <header>
-        <img class="logo" src="img/Logo.png" alt="logo">
+        <img class="logo" src="../img/Logo.png" alt="logo">
     </header>
     <main>
         <div class="loginBox">
@@ -27,12 +26,36 @@
                     <input type="password" name="contraseña" required>
                 </div>
                 <div class="olvido"><a href="#">¿Olvidaste la contraseña?</a></div>
-                <button class="btn">Iniciar Sesion</button>
+                <div class="btn"><a href="../index.html" >Iniciar Sesion</a></div>
                 <div class="registro">¿No tenes cuenta?
-                    <a href="#">Resgistrate</a></div>
+                    <a href="#popup">Resgistrate</a></div>
             </form>
         </div>
     </main>
+    <form>
+        <img src="...">
+        <div id="popup">
+        <label for="email">Email</label>
+        <input type="email" id="email" autofocus>
+        </div>
+         <label for="nombre">Nombre</label>
+            <input type="nombre" id="nombre">
+        <div>
+        <label for="apellido">Apellido</label>
+        <input type="apellido" id="apellido">
+        </div>
+        <label for="contrasenia">Contraseña</label>
+        <input type="contrasenia" id="contrasenia">
+        <div>
+        <label for="contraseniaRepetida">Repetir contraseña</label>
+            <input type="contraseniaRepetida" id="contraseniaRepetida">
+        </div>
+        <div class="form__buttons">
+            <button type="button">Cancelar</button>
+            <button type="button">Guardar</button>
+        </div>
+    
+    </form>
 </body>
 
 </html>
