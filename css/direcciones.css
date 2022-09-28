@@ -90,6 +90,8 @@ form {
 }
 
 .center form .form-element input[type="text"],
+.center form .form-element input[type="email"],
+.center form .form-element input[type="password"],
 .center form .form-element select {
     margin-top: 3px;
     order: 2;

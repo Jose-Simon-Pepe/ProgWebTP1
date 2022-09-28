@@ -118,3 +118,9 @@ main{
 .img{
     width: 100px;
 }
+
+#boton-registro{
+    display: block;
+    text-align: center;
+    padding-top: 1em;
+}
