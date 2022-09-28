@@ -62,7 +62,6 @@
                     </p>
                 </div>
                 
-                                
                 <div class="grilla">
                     <p class="item-direc"><span class="bold-grilla">Alias</span></p>
                     <p class="item-direc"><span class="bold-grilla">Dirección</span></p>
@@ -92,7 +91,7 @@
                 <div class="subtitulo">
                     <h2><i class="fa-regular fa-credit-card"></i> Mis métodos de pago</h2>
                     <p>
-                        <a class="boton-agregar" href="mis-metodos-de-pago.html">Agregar</a>
+                        <a class="boton-agregar" href="#mis-metodos-de-pago">Agregar</a>
                     </p>
                 </div>
 
@@ -145,7 +144,6 @@
     </main>
          <!------------------------POP UP NUEVA DIRECCION GIULI------------------------------------>
          <div id="popup-direccion" class="center">
-        
             <form action="#">
                 <a id="cerrar" href="#">&times;</a>
                 <h1 class="misDirecciones">Nueva Dirección</h1>
@@ -191,8 +189,64 @@
             </form>
     
         </div>
+
     
-         <!------------------------FALTARIA POP UP NUEVO METODO DE PAGO ------------------------------------>
+    
+         <!------------------------POP UP NUEVO METODO DE PAGO ------------------------------------>
+         <div class="center" id="mis-metodos-de-pago">
+            <form action="#" method="get" enctype="text/plain">
+                <div class="form-element">
+                    <p>Nueva tarjeta</p>
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <a id="cerrar" href="#">&times;</a>
+                <div class="form-element">
+                    <label for="new-card-alias">Alias</label>
+                    <input type="text" name="new-card-alias" id="new-card-alias" placeholder="Alias" autofocus>
+                </div>
+                <div class="form-element">
+                    <label for="new-card-number">Número de tarjeta</label>
+                    <input type="text" name="new-card-number" id="new-card-number" placeholder="Número tarjeta">
+                </div>
+                <div class="form-element">
+                    <label for="new-card-code">Código</label>
+                    <input type="text" name="new-card-code" id="new-card-code" placeholder="Código" maxlength="3">
+                    <label for="new-card-expiration">Vencimiento</label>
+                    <input type="text" name="new-card-expiration" id="new-card-expiration" placeholder="00-00" maxlength="5">
+                </div>
+                <div class="form-element">
+                    <label for="new-card-holder">Titular</label>
+                    <input type="text" name="new-card-holder" id="new-card-holder" placeholder="Titular">
+                </div>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+         <!------------------------POP UP CREAR USUARIO-------------------------------------------->
+         <form action="#">
+            <img src="...">
+            <div class="form-element">
+            <label for="email">Email</label>
+            <input type="email" id="email" autofocus>
+            </div>
+             <label for="nombre">Nombre</label>
+                <input type="nombre" id="nombre">
+            <div class="form-element">
+            <label for="apellido">Apellido</label>
+            <input type="apellido" id="apellido">
+            </div>
+            <label for="contrasenia">Contraseña</label>
+            <input type="contrasenia" id="contrasenia">
+            <div class="form-element">
+            <label for="contraseniaRepetida">Repetir contraseña</label>
+                <input type="contraseniaRepetida" id="contraseniaRepetida">
+            </div>
+            <div class="form__buttons">
+                <button type="button">Cancelar</button>
+                <button type="button">Guardar</button>
+            </div>
+        
+        </form>
+        
          
     <footer class="contenedor-footer">
         <div>
