@@ -1,80 +1,67 @@
-<!--
-todo:
-a. Menú para navegar las distintas secciones del sitio.
-b. Banner con imágenes de los productos (poner pocas imagenes)
-c. Botones de Categorías de Producto
-d. Productos más vendidos que incluya precio y botón de agregarlo al carrito de
-compras.
-e. Carrusel de formas de pago
-f. Footer a tres columnas, en las cuales se mostrará la siguiente información,
-i. Logo y horarios de atención
-ii. Datos del grupo (Nombre y DNI de cada integrante)
-iii. Links a redes sociales
--->
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
-    
+
     <script src="https://kit.fontawesome.com/c3af30a602.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/share.css">
     <link rel="stylesheet" href="css/index.css">
 
 </head>
+
 <body>
-<header>
-    <div class="header__pri">
-        <img class="logo" src="img/Logo.png" alt="logo">
-        <div class="buscar">
-            <span class="material-icons">
-                search
-            </span>
-            <input class="buscador" type="text" name="" id="buscar" placeholder="Buscar productos">
+    <header>
+        <div class="header__pri">
+            <img class="logo" src="img/Logo.png" alt="logo">
+            <div class="buscar">
+                <span class="material-icons">
+                    search
+                </span>
+                <input class="buscador" type="text" name="" id="buscar" placeholder="Buscar productos">
+            </div>
+            <div class="carrito">
+                <a href="pages/mi-carrito.html">
+                    <button>
+                        <span class="material-icons">
+                            shopping_cart
+                        </span>
+                    </button>
+
+                </a>
+            </div>
         </div>
-        <div class="carrito">
-            <a href="pages/mi-carrito.html">
-                <button>
-                    <span class="material-icons">
-                        shopping_cart
-                    </span>
-                </button>
+        <nav class="navMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/categorias.html">Categorías</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+                <li><a href="pages/mi-cuenta.html">Mi Cuenta</a></li>
+            </ul>
+        </nav>
 
-            </a>
-        </div>
-    </div>
-    <nav class="navMenu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/categorias.html">Categorías</a></li>
-            <li><a href="pages/contacto.html">Contacto</a></li>
-            <li><a href="pages/mi-cuenta.html">Mi Cuenta</a></li>
-        </ul>
-    </nav>
+    </header>
 
-</header>
-
-<aside class="main__producto">
-    <!--Banner de productos-->
-    <a href="#slide1"><i class="fa-solid fa-arrow-left"></i></a>
+    <aside class="main__producto carrousel">
+        <!--Banner de productos-->
+        <a href="#slide1"><i class="fa-solid fa-arrow-left"></i></a>
         <ul class="slider">
             <li id="slide1">
                 <img src="images/oferta.jpg" alt="">
             </li>
             <li id="slide2">
-                <img src="images/electro.jpg" alt=""> 
+                <img src="images/electro.jpg" alt="">
             </li>
-        
+
         </ul>
-    <a href="#slide2"><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#slide2"><i class="fa-solid fa-arrow-right"></i></a>
 
-</aside>
+    </aside>
 
 
-<!--
+    <!--
 <aside>
     <i class="fa-solid fa-arrow-left"></i>
     <div class="main__producto"></div>
@@ -82,152 +69,137 @@ iii. Links a redes sociales
 </aside>
 -->
 
-<!--Me falto este de categoria-->
-<main class="index__main">
-    <section>
-        <h2>Categorias</h2>
-        <article>
-            <span class="producto__nombre">Categoría 1</span>
-        </article>
-        <article>
-            <span class="producto__nombre">Categoría 2</span>
-        </article>
-        <article>
-            <span class="producto__nombre">Categoría 3</span>
-        </article>
-    </section>
-</main>
+    <main class="index__main">
+        <section>
+            <h2>Categorias</h2>
+                <ul class="categorias">
+                    <li class="category"><a href="#">Categoria 1</a></li>
+                    <li class="category"><a href="#">Categoria 1</a></li>
+                    <li class="category"><a href="#">Categoria 1</a></li>
+                </ul>
+        </section>
+    </main>
 
-<aside class="index__main">
-    <h2>Productos mas vendidos</h2>
-    <ul class="productos-mas-vendido">
-        <li>
-            <img src="images/notebook.jpg" alt="Notebook LENOVO Ideapad 3 14iml05 14" Intel Core I3">
-            <div class="pie-producto">
-                <div>
-                    <p class="titulo-producto">Notebook LENOVO Ideapad 3 14iml05 14" Intel Core I3</p>
-                    <h3 class="precio-producto">$260.3</h3>
-                </div>
-                <a href="pages/mi-carrito.html">
-                    <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
-                </a>
-                
-            </div>
-
-        </li>
-
-        <li>
-            <img src="images/heladera.jpg" alt="Heladera Con Freezer Samsung 321 L Rt32k5930sl Plata">
-            <div class="pie-producto">
-                <div>
-                    <p class="titulo-producto">Heladera Con Freezer Samsung 321 L Rt32k5930sl Plata</p>
-                    <h3 class="precio-producto">$260.3</h3>
-                </div>
-                <a href="pages/mi-carrito.html">
-                    <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
-                </a>
-            </div>
-        </li>
-
-        <li>
-            <img src="images/sabana.jpg" alt="Sábana Queen 144 Hilos Estampada">
-            <div class="pie-producto">
-                <div>
-                    <p class="titulo-producto">Sábana Queen 144 Hilos Estampada</p>
-                    <h3 class="precio-producto">$260.3</h3>
-                </div>
-                <a href="pages/mi-carrito.html">
-                    <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
-                </a>
-            </div>
-        </li>
-    </ul>
-
-    <!--<section>
-        
+    <aside class="index__main">
         <h2>Productos mas vendidos</h2>
-        <article class="producto">
-            <span class="producto__nombre">Categoría 1</span>
-            <span class="tarjeta-producto-similar precio-flotante">$500000</span></div>
-            <div>
-                <p></p>
-                <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+        <ul class="productos-mas-vendido">
+            <li>
+                <img src="images/notebook.jpg" alt="Notebook LENOVO Ideapad 3 14iml05 14" Intel Core I3">
+                <div class="pie-producto">
+                    <div>
+                        <p class="titulo-producto">Notebook LENOVO Ideapad 3 14iml05 14" Intel Core I3</p>
+                        <h3 class="precio-producto">$260.3</h3>
+                    </div>
+                    <a href="pages/mi-carrito.html">
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                    </a>
+
+                </div>
+
+            </li>
+
+            <li>
+                <img src="images/heladera.jpg" alt="Heladera Con Freezer Samsung 321 L Rt32k5930sl Plata">
+                <div class="pie-producto">
+                    <div>
+                        <p class="titulo-producto">Heladera Con Freezer Samsung 321 L Rt32k5930sl Plata</p>
+                        <h3 class="precio-producto">$260.3</h3>
+                    </div>
+                    <a href="pages/mi-carrito.html">
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <img src="images/sabana.jpg" alt="Sábana Queen 144 Hilos Estampada">
+                <div class="pie-producto">
+                    <div>
+                        <p class="titulo-producto">Sábana Queen 144 Hilos Estampada</p>
+                        <h3 class="precio-producto">$260.3</h3>
+                    </div>
+                    <a href="pages/mi-carrito.html">
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <img src="images/sabana.jpg" alt="Sábana Queen 144 Hilos Estampada">
+                <div class="pie-producto">
+                    <div>
+                        <p class="titulo-producto">Sábana Queen 144 Hilos Estampada</p>
+                        <h3 class="precio-producto">$260.3</h3>
+                    </div>
+                    <a href="pages/mi-carrito.html">
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <img src="images/sabana.jpg" alt="Sábana Queen 144 Hilos Estampada">
+                <div class="pie-producto">
+                    <div>
+                        <p class="titulo-producto">Sábana Queen 144 Hilos Estampada</p>
+                        <h3 class="precio-producto">$260.3</h3>
+                    </div>
+                    <a href="pages/mi-carrito.html">
+                        <button class="carrito"><i class="fa-solid fa-cart-plus"></i></button>
+                    </a>
+                </div>
+            </li>
+
+        </ul>
+
+
+        <aside class="modo-de-pagos">
+            <h2>Formas de pago</h2>
+            <div class="carrousel">
+                <a href="#slide-pago1"><i class="fa-solid fa-arrow-left"></i></a>
+                <ul class="slider-pagos">
+                    <li id="slide-pago1">
+                        <img class="credito-imagen" src="images/credito.png" alt="">
+
+
+                    </li>
+                    <li id="slide-pago2">
+                        <img class="debito-imagen" src="images/debitos.png" alt="">
+
+                    </li>
+                </ul>
+                <a href="#slide-pago2"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
-        </article>
-        <article class="producto">
-            <span class="producto__nombre">Categoría 2</span>
-            <span class="tarjeta-producto-similar precio-flotante">$500000</span></div>
+
+        </aside>
+
+
+        <footer class="contenedor-footer">
             <div>
-                <p></p>
-                <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                <img class="logo" src="images/logo_unlam2.png" alt="logo-unlam">
+                <p>Lunes a Sábado</p>
+                <p>de 8 a 14hs. y de 16 a 20hs.</p>
             </div>
-        </article>
-        <article class="producto">
-            <span class="producto__nombre">Categoría 3</span>
-            <span class="tarjeta-producto-similar precio-flotante">$500000</span></div>
             <div>
-                <p></p>
-                <a href="carrito.html" class="logo logo-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                <p>Datos del grupo:</p>
+                <p>Cravota, Giuliana</p>
+                <p>Pepé, José Simón</p>
+                <p>Salva Guitian, Jesica Belén</p>
+
             </div>
-        </article>
-    </section>-->
-</aside>
+            <div>
+                <p>Seguinos en: </p>
+                <p class="iconos-red-social">
+                    <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </p>
 
-<aside class="modo-de-pagos">
-    <h2>Formas de pago</h2>
-    
-    <a href="#slide-pago1"><i class="fa-solid fa-arrow-left"></i></a>
-    <ul class="slider-pagos">
-        <li id="slide-pago1">
-            <img class="credito-imagen"src="images/credito.png" alt="">
-                 
-     
-        </li>
-        <li id="slide-pago2">
-            <img class="debito-imagen" src="images/debitos.png" alt=""> 
-            
-        </li>
-    </ul>
-    <a href="#slide-pago2"><i class="fa-solid fa-arrow-right"></i></a>
-    
-    <!--Carrousel de pago
-    hice unos cambios en el html igualmente lo pueden borrar 
-igualmente dejo comentado lo anterior"-->
-<!--
-    <h2>Formas de pago</h2>
-    <i class="fa-solid fa-arrow-left"></i>
-    <img class="carrousel__producto">
-    <img class="carrousel__producto">
-    <img class="carrousel__producto">
-    <i class="fa-solid fa-arrow-right"></i>
--->
-    
-</aside>
+            </div>
 
-
-<footer class="contenedor-footer">
-    <div>
-        <img class= "logo" src="images/logo_unlam2.png" alt="logo-unlam">
-        <p>Lunes a Sábado</p>
-        <p>de 8 a 14hs. y de 16 a 20hs.</p>
-    </div>
-    <div>
-        <p>Datos del grupo:</p>
-        <p>Cravota, Giuliana</p>
-        <p>Pepé, José Simón</p>
-        <p>Salva Guitian, Jesica Belén</p>
-
-    </div>
-    <div>
-        <p>Seguinos en: </p>
-        <p class="iconos-red-social">
-            <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        </p>
-        
-    </div>
-
-</footer>
+        </footer>
 
 </body>
+
 </html>
