@@ -1,28 +1,59 @@
-<form action="#">
-	<img src="...">
-	<div class="form-element">
-	<label for="email">Email</label>
-	<input type="email" id="email" autofocus>
-	</div>
- 	<label for="nombre">Nombre</label>
-        <input type="nombre" id="nombre">
-	<div class="form-element">
-	<label for="apellido">Apellido</label>
-	<input type="apellido" id="apellido">
-	</div>
-	<label for="contrasenia">Contraseña</label>
-	<input type="contrasenia" id="contrasenia">
-	<div class="form-element">
-	<label for="contraseniaRepetida">Repetir contraseña</label>
-        <input type="contraseniaRepetida" id="contraseniaRepetida">
-	</div>
-	<div class="form__buttons">
-		<button type="button">Cancelar</button>
-		<button type="button">Guardar</button>
-	</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/crear-usuario.css">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div class="center" id="crear-usuario">
+		<form action="#">
+	
+		   <div class="popup-header">
+			   <p>Registrarse</p>
+			   <i class="fa-solid fa-credit-card"></i>
+			   <a id="cerrar" href="#">&times;</a>
+		   </div>
+	
+		   <div class="form-element">
+			   <label for="new-email">Email</label>
+			   <input type="email" name="new-email" id="new-email" placeholder="ejemplo@gmail.com">
+		   </div>
+		   <div class="form-element">
+			   <label for="new-email">Nombre</label>
+			   <input type="text" name="new-name" id="new-name" placeholder="tu nombre">
+		   </div>
+		   <div class="form-element">
+			   <label for="new-email">Apellido</label>
+			   <input type="text" name="new-secondaryname" id="new-secondaryname" placeholder="tu apellido">
+		   </div>
+		   <div class="form-element">
+			   <label for="new-email">Contraseña</label>
+			   <input type="password" name="new-pass" id="new-pass" placeholder="tu pass">
+		   </div>
+		   <div class="form-element">
+			   <label for="new-email">Repetir contraseña</label>
+			   <input type="password" name="new-pass-again" id="new-pass-again" placeholder="tu pass">
+		   </div>
+		 
+		   <div class="form-element form-button">
+			   <a class="a-to-button" href="login.html">Cancelar</button>
+			   <a class="a-to-button" href="login.html">Guardar</button>
+		   </div>
+	
+	   </form>
+	   </div>
+	
+	
+		
+	
 
-</form>
 
+</body>
+</html>
 
 
 	
