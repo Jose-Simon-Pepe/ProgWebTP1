@@ -88,12 +88,12 @@ for (let index = 0; index < agregarCarritoButtons.length; index++) {
       subirProductoACarrito(listaProductos[currentButton.id]);
     })
 }
+
+// persistencia en localstorage de los productos
+
 let ordenLlegada=0;
 function subirProductoACarrito(producto){
     localStorage.setItem(ordenLlegada,JSON.stringify(producto));
     ordenLlegada++;
 }
 
-
-
-// persistencia en localstorage de los productos
