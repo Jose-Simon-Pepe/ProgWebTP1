@@ -21,10 +21,12 @@ let prod1 = new Prod("Notebook LENOVO Ideapad 3 14iml05 14\" Intel Core I3","$26
 let prod2  = new Prod("Heladera Con Freezer Samsung 321 L Rt32k5930sl Plata","$160.2", "images/heladera.jpg");
 let prod3 = new Prod("Sábana Queen 144 Hilos Estampada","$200.3", "images/sabana.jpg");
 
+let listaProductos = [prod1, prod2, prod3];
+
 // creacion de elemento li en .productos-mas-vendido a partir de los Prod
 let productosMasVendido = document.getElementsByClassName("productos-mas-vendido")[0] ;
 
-function createLiFromProduct(prod){
+function createLiFromProduct(prod, iterador){
     //create li element
     let prodLi = document.createElement("li");
     //create li subelements
@@ -46,6 +48,7 @@ function createLiFromProduct(prod){
     // create prod pie a button
     let prodPieAButton = document.createElement("button");
     prodPieAButton.className= "carrito agregarCarrito";
+    prodPieAButton.id= iterador;
     // create i into that button
     let prodPieAButtonLi = document.createElement("i");
     prodPieAButtonLi.className= "fa-solid fa-cart-plus";
@@ -61,9 +64,10 @@ function createLiFromProduct(prod){
 }
 
 // creating product list
-
-[prod1,prod2,prod3].forEach(element => {
-    createLiFromProduct(element);
+let iterador=0;
+listaProductos.forEach(element => {
+    createLiFromProduct(element,iterador);
+    iterador++;
 });
 
 /* carrito 
@@ -78,9 +82,18 @@ leyéndolos desde el localstorage.
 let agregarCarritoButtons = document.getElementsByClassName("agregarCarrito");
 
 for (let index = 0; index < agregarCarritoButtons.length; index++) {
-    agregarCarritoButtons[index].addEventListener("click",()=>{
-        console.log("hola")
+    let currentButton = agregarCarritoButtons[index];
+    currentButton.addEventListener("click",()=>{
+      console.log(listaProductos[currentButton.id]);
+      subirProductoACarrito(listaProductos[currentButton.id]);
     })
 }
+let ordenLlegada=0;
+function subirProductoACarrito(producto){
+    localStorage.setItem(ordenLlegada,JSON.stringify(producto));
+    ordenLlegada++;
+}
+
+
 
 // persistencia en localstorage de los productos
