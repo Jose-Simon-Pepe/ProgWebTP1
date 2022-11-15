@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:none;
+}
+
+body{
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+main{
+    margin: auto;
+    width: 80%;
+
+}
+
+.tarjeta-producto{
+    display: flex;
+    justify-content:space-around;
+}
+
+.foto-descripcion img{
+    width: 300px;
+}
+
+.boton-cantidad{
+    text-align: right;
+    margin-right: 100px;
+}
+
+
+.carrousel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+
+.carrousel > a{
+    padding: 1em;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.carrousel li {
+    width: 1fr;
+    padding: 1em;
+}
+
+.carrousel li img{
+    width: 25%;
+    max-width: 200px;
+}
+
+aside h2{
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+.productos-mas-vendido {
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap:nowrap;
+    overflow-x: scroll;
+}
+
+.productos-mas-vendido li {
+    width: 300px;
+    margin: 15px;
+    padding: 2px 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    box-sizing: none;
+}
+
+.productos-mas-vendido li:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+.productos-mas-vendido li img {
+    width: 280px;
+}
+
+.index__main h2 {
+    text-align: center;
+}
+
+
+input[type=number]{
+    text-align: center;
+    
+}
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+
+.cuadro-cant{
+    width: 45px;
+}
