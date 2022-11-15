@@ -1,49 +1,37 @@
 
 
 // creacion de elemento li en .productos-mas-vendido a partir de los Prod
-let productosMasVendido = document.getElementsByClassName("productos-mas-vendido")[0] ;
+let productosMasVendido = document.getElementsByClassName("productos-mas-vendido")[0];
 
-function createLiFromProduct(prod, iterador){
-    //create li element
-    let prodLi = document.createElement("li");
-    //create li subelements
-    let prodImg = document.createElement("img");
-    prodImg.src= prod.image;
-    let prodPie = document.createElement("div");
-    prodPie.className= "pie-producto";
-    // create prod pie div
-    let prodPieDiv = document.createElement("div");
-    // create prod pie div subelements
-    let prodPieDivP = document.createElement("p");
-    prodPieDivP.className="titulo-producto";
-    prodPieDivP.innerText= prod.nombre;
-    let prodPieDivH3 = document.createElement("h3");
-    prodPieDivH3.className="precio-producto";
-    prodPieDivH3.innerText=prod.precio;
-    // create prod pie a
-    let prodPieA = document.createElement("a");
-    // create prod pie a button
-    let prodPieAButton = document.createElement("button");
-    prodPieAButton.className= "carrito agregarCarrito";
-    prodPieAButton.id= iterador;
-    // create i into that button
-    let prodPieAButtonLi = document.createElement("i");
-    prodPieAButtonLi.className= "fa-solid fa-cart-plus";
-    // adding as childs..
-    productosMasVendido.appendChild(prodLi);
-    prodLi.appendChild(prodImg);
-    prodLi.appendChild(prodPie);
-    prodPie.appendChild(prodPieDiv);
-    prodPieDiv.appendChild(prodPieDivP);
-    prodPieDiv.appendChild(prodPieDivH3);
-    prodPie.appendChild(prodPieA);
-    prodPieA.appendChild(prodPieAButton);
+function createLiFromProduct(prod, iterador) {
+   
+    const liProducto = `
+   
+        <img src="${prod.image}" alt="${prod.nombre}">
+        <div class="pie-producto">
+            <div>
+                <p class="titulo-producto">${prod.nombre}</p>
+                <h3 class="precio-producto">${prod.precio}</h3>
+            </div>
+            <a href="pages/mi-carrito.html">
+                <button class="carrito agregarCarrito" id="${iterador}"><i class="fa-solid fa-cart-plus"></i></button>
+            </a>
+
+        </div>
+
+ 
+    `
+
+    const liElement = document.createElement('li');
+    liElement.innerHTML = liProducto;
+    productosMasVendido.appendChild(liElement);
+
 }
 
 // creating product list
-let iterador=0;
+let iterador = 0;
 listaProductos.forEach(element => {
-    createLiFromProduct(element,iterador);
+    createLiFromProduct(element, iterador);
     iterador++;
 });
 
@@ -60,17 +48,31 @@ let agregarCarritoButtons = document.getElementsByClassName("agregarCarrito");
 
 for (let index = 0; index < agregarCarritoButtons.length; index++) {
     let currentButton = agregarCarritoButtons[index];
-    currentButton.addEventListener("click",()=>{
-      console.log(listaProductos[currentButton.id]);
-      subirProductoACarrito(listaProductos[currentButton.id]);
+    currentButton.addEventListener("click", () => {
+        console.log(listaProductos[currentButton.id]);
+        subirProductoACarrito(listaProductos[currentButton.id]);
     })
 }
 
 // persistencia en localstorage de los productos
 
-let ordenLlegada=0;
-function subirProductoACarrito(producto){
-    localStorage.setItem(ordenLlegada,JSON.stringify(producto));
-    ordenLlegada++;
+function subirProductoACarrito(producto) {
+    // se busca si existe item con mismo id
+    if (localStorage.getItem(producto.id) != null) {
+        aniadirConsumo(producto, 1);
+    }
+    else {
+        // caso negativo, se agrega el item
+        producto.cantidadConsumo++;
+        localStorage.setItem(producto.id, JSON.stringify(producto));
+    }
+    // caso afirmativo, se agrega una cantidad
 }
 
+/*function aniadirConsumo(producto, valor){
+    console.log("tiene este producto "+localStorage.getItem(producto.id));
+    producto = JSON.parse(localStorage.getItem(producto.id));
+    producto.cantidadConsumo =+ valor;
+    localStorage.removeItem(producto.id);
+    localStorage.setItem(producto.id,JSON.stringify(producto));
+}*/
