@@ -44,24 +44,33 @@
 
     </header>
 
-    <aside class="main__producto carrousel">
-        <!--Banner de productos-->
-        <a href="#slide1"><i class="fa-solid fa-arrow-left"></i></a>
-        <ul class="slider">
-            <li id="slide1">
-                <img src="images/oferta.jpg" alt="">
-            </li>
-            <li id="slide2">
-                <img src="images/electro.jpg" alt="">
-            </li>
 
-        </ul>
-        <a href="#slide2"><i class="fa-solid fa-arrow-right"></i></a>
+    <aside>
+
+        <div class="principalIndex">
+            <button role="button" id="nextBtn" class="nextBtn">
+                <span class="material-icons">
+                    chevron_left
+                </span>
+            </button>
+            <div class="carrouselPrincipal" id="carrouselPrincipal">
+                <img class="principal" src="images/oferta.jpg" alt="oferta">
+                <img class="principal" src="images/electro.jpg" alt="electronica">
+            </div>
+            <button role="button" id="beforeBtn" class="beforeBtn">
+                <span class="material-icons">
+                    chevron_right
+                </span>
+            </button>
+        </div>
 
     </aside>
+    <aside>
 
 
-    <!--
+
+
+        <!--
 <aside>
     <i class="fa-solid fa-arrow-left"></i>
     <div class="main__producto"></div>
@@ -69,21 +78,21 @@
 </aside>
 -->
 
-    <main class="index__main">
-        <section>
-            <h2>Categorias</h2>
+        <main class="index__main">
+            <section>
+                <h2>Categorias</h2>
                 <ul class="categorias">
                     <li class="category"><a href="#">Categoria 1</a></li>
                     <li class="category"><a href="#">Categoria 1</a></li>
                     <li class="category"><a href="#">Categoria 1</a></li>
                 </ul>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <aside class="index__main">
-        <h2>Productos mas vendidos</h2>
-        <ul class="productos-mas-vendido">
-            <!--
+        <aside class="index__main">
+            <h2>Productos mas vendidos</h2>
+            <ul class="productos-mas-vendido">
+                <!--
             <li>
                 <img src="images/notebook.jpg" alt="Notebook LENOVO Ideapad 3 14iml05 14" Intel Core I3">
                 <div class="pie-producto">
@@ -152,59 +161,69 @@
             </li>
             -->
 
-        </ul>
+            </ul>
 
 
-        <aside class="modo-de-pagos">
-            <h2>Formas de pago</h2>
-            <div class="carrousel">
-                <a href="#slide-pago1"><i class="fa-solid fa-arrow-left"></i></a>
-                <ul class="slider-pagos">
-                    <li id="slide-pago1">
-                        <img class="credito-imagen" src="images/credito.png" alt="">
+            <aside>
+                <div class="metodosDePago">
+                    <h2>Metodos De Pago</h2>
+                    <div class="mainContenedor">
+                        <button role="button" id="flechaIzq" class="flechaIzq">
+                            <span class="material-icons">
+                                chevron_left
+                            </span>
+                        </button>
+
+                        <div class="carrousel" id="carrousel">
+                            <img class="metodo" src="img/cabal_debito.png" alt="cabal_debito">
+                            <img class="metodo" src="img/mastercard-logo.png" alt="mastercard-logo">
+                            <img class="metodo" src="img/mercado-pago-logo.jpg" alt="mercado-pago-logo">
+                            <img class="metodo" src="img/visa-debito.png" alt="visa-debito">
+                            <img class="metodo" src="img/visa-logo.png" alt="visa-logo">
+                            <img class="metodo" src="img/logo_amex.jpg" alt="american-express">
+                            <img class="metodo" src="img/maestro-logo.png" alt="maestro-logo">
+
+                        </div>
+                        <button role="button" id="flechaDer" class="flechaDer">
+                            <span class="material-icons">
+                                chevron_right
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </aside>
 
 
-                    </li>
-                    <li id="slide-pago2">
-                        <img class="debito-imagen" src="images/debitos.png" alt="">
 
-                    </li>
-                </ul>
-                <a href="#slide-pago2"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+            <footer class="contenedor-footer">
+                <div>
+                    <img class="logo" src="images/logo_unlam2.png" alt="logo-unlam">
+                    <p>Lunes a Sábado</p>
+                    <p>de 8 a 14hs. y de 16 a 20hs.</p>
+                </div>
+                <div>
+                    <p>Datos del grupo:</p>
+                    <p>Cravota, Giuliana</p>
+                    <p>Pepé, José Simón</p>
+                    <p>Salva Guitian, Jesica Belén</p>
 
-        </aside>
+                </div>
+                <div>
+                    <p>Seguinos en: </p>
+                    <p class="iconos-red-social">
+                        <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </p>
 
+                </div>
 
-        <footer class="contenedor-footer">
-            <div>
-                <img class="logo" src="images/logo_unlam2.png" alt="logo-unlam">
-                <p>Lunes a Sábado</p>
-                <p>de 8 a 14hs. y de 16 a 20hs.</p>
-            </div>
-            <div>
-                <p>Datos del grupo:</p>
-                <p>Cravota, Giuliana</p>
-                <p>Pepé, José Simón</p>
-                <p>Salva Guitian, Jesica Belén</p>
+            </footer>
 
-            </div>
-            <div>
-                <p>Seguinos en: </p>
-                <p class="iconos-red-social">
-                    <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i
-                            class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a>
-                </p>
-
-            </div>
-
-        </footer>
-
-        <script src="js/Producto.js"></script>
-        <script src="js/general.js"></script>
-        <script src="js/functions.js"></script>
+            <script src="js/Producto.js"></script>
+            <script src="js/general.js"></script>
+            <script src="js/index.js"></script>
 
 </body>
 

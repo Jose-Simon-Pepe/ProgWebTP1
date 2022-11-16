@@ -17,24 +17,26 @@
     <main>
         <div class="loginBox">
             <h1>Iniciar Sesion</h1>
-            <form action="">
+            <form action="" id="form">
                 <div class="usuario">
                     <label for="usuario">Usuario</label>
-                    <input type="text" name="usuario" required>
+                    <input type="text" name="usuario" id="usuarioInput" required>
                 </div>
                 <div class="usuario">
                     <label for="contraseña">Contraseña</label>
-                    <input type="password" name="contraseña" required>
+                    <input type="password" name="contraseña" id="contraseña" required>
                 </div>
                 <div class="olvido"><a href="#">¿Olvidaste la contraseña?</a></div>
-                <div class="btn"><a href="../index.html" >Iniciar Sesion</a></div>
+                <a href="../index.html">
+                <input disabled class="btn" id="btn" type="button"  value="Iniciar Sesión">
+                </a>
                 <div class="registro">¿No tenes cuenta?
                     <a href="crear_usuario.html">Resgistrate</a></div>
             </form>
         </div>
     </main>
    
-
+<script src="../js/login.js"></script>
 </body>
 
 </html>

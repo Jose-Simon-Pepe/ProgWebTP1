@@ -20,7 +20,8 @@
                 <span class="material-icons">
                     search
                 </span>
-                <input class="buscador" type="text" name="" id="buscar" placeholder="Buscar productos">
+                <input class="buscador" type="text" name="" id="buscador" onkeyup="buscar()"
+                    placeholder="Buscar productos">
             </div>
             <div class="carrito">
                 <a href="mi-carrito.html">
@@ -37,7 +38,7 @@
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../pages/categorias.html">Categorías</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
                 <li><a href="../pages/mi-cuenta.html">Mi Cuenta</a></li>
             </ul>
         </nav>
@@ -45,24 +46,82 @@
     </header>
     <main>
         <h1>CATEGORÍAS</h1>
-        <section class="categorias">
+        <div class="container">
+            <div class="categorias">
+                <div class="categoria">
+                    <a href="../pages/segunda-pantalla.html">
+                        <img src="../img/Ofertas.png" alt="Ofertas">
+                        <h2>Ofertas</h2>
+                    </a>
+                </div>
+                <div class="categoria">
+                    <a href="../pages/segunda-pantalla.html">
+                        <img src="../img/Tecnologia.png" alt="Tecnologia">
+                        <h2>Tecnologia</h2>
+                    </a>
+                </div>
+                <div class="categoria">
+                    <a href="../pages/segunda-pantalla.html">
+                        <img src="../img/Electrodomesticos.png" alt="Electrodomesticos">
+                        <h2>Electrodomesticos</h2>
+                    </a>
+                </div>
+                <div class="categoria">
+                    <a href="../pages/segunda-pantalla.html">
+                        <img src="../img/Hogar y Textil.png" alt="Hogar y Textil">
+                        <h2>Hogar y Textil</h2>
+                    </a>
+                </div>
+                <div class="categoria">
+                    <a href="../pages/segunda-pantalla.html">
+                        <img src="../img/Almacen.png" alt="Almacen">
+                        <h2>Almacen</h2>
+                    </a>
+                </div>
+                <div class="categoria">
+                    <a href="../pages/segunda-pantalla.html">
+                        <img src="../img/Bebidas.png" alt="Bebidas">
+                        <h2>Bebidas</h2>
+                    </a>
+                </div>
+                <div class="categoria">
+                    <a href="../pages/segunda-pantalla.html">
+                        <img src="../img/Frutas y Verduras.png" alt="Frutas y Verduras">
+                        <h2>Frutas y Verduras</h2>
+                    </a>
+                </div>
+                <div class="categoria">
+                    <a href="../pages/segunda-pantalla.html">
+                        <img src="../img/Lacteos.png" alt="Lacteos">
+                        <h2>Lacteos</h2>
+                    </a>
+                </div>
+                <div class="categoria">
+                    <a href="../pages/segunda-pantalla.html">
+                        <img src="../img/Congelados.png" alt="Congelados">
+                        <h2>Congeladoss</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- <section class="categorias">
             <article class="categoria">
-                <img src="../img/Ofertas.png" alt="Ofertas" class="categoriaImg">
+                <img src="../img/Ofertas.png" alt="Ofertas"  data-tags="ofertas" class="categoriaImg">
                 <h2 class="categoriaTitle">Ofertas</h2>
                 <a href=""></a>
             </article>
             <article class="categoria">
-                <img src="../img/Tecnologia.png" alt="Tecnología" class="categoriaImg">
+                <img src="../img/Tecnologia.png" alt="Tecnología" data-tags="tecnolofia" class="categoriaImg">
                 <h2 class="categoriaTitle">Tecnología</h2>
                 </a>
             </article>
             <article class="categoria">
-                <img src="../img/Electrodomesticos.png" alt="Electrodomesticos" class="categoriaImg">
+                <img src="../img/Electrodomesticos.png" alt="Electrodomesticos" data-tags="electrodomesticos" class="categoriaImg">
                 <h2 class="categoriaTitle">Electrodomesticos</h2>
                 <a href=""></a>
             </article>
             <article class="categoria">
-                <img src="../img/Hogar y Textil.png" alt="Hogar y textil" class="categoriaImg">
+                <img src="../img/Hogar y Textil.png" alt="Hogar y textil" data-tags="hogar y textil" class="categoriaImg">
                 <h2 class="categoriaTitle">Hogar y textil</h2>
                 <a href=""></a>
             </article>
@@ -92,7 +151,7 @@
                 <h2 class="categoriaTitle">Congelados</h2>
                 <a href=""></a>
             </article>
-        </section>
+        </section>-->
     </main>
     <footer class="contenedor-footer">
         <div>
@@ -110,13 +169,16 @@
         <div>
             <p>Seguinos en: </p>
             <p class="iconos-red-social">
-                <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
             </p>
-            
+
         </div>
 
     </footer>
+    <script src="../js/categoria.js"></script>
 </body>
 
 </html>

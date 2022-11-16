@@ -13,48 +13,46 @@ h1 {
     padding: 0.3em;
 }
 
-.categorias {
-    display: block;
-    justify-content: center;
-    padding: 28px;
-    gap: 1em;
+.hide{
+    display: none;
 }
-
-.categoria {
-    width: 150px;
-    height: 190px;
-    background-color: #333;
-    border-radius: 10px;
-    outline: 1px solid #333;
-    position: relative;
-    overflow: hidden;
-    padding: 1em;
-
-}
-
-.categoriaTitle {
-    color: white;
-    position: absolute;
-    left: 15px;
-    bottom: 15px;
-    font-size: 20px;
-    text-shadow: 0 0 1px rgba(0, 0, 0, .5);
-}
-
-.categoriaImg {
-    position: absolute;
-    inset: 0;
+.categorias{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: .6;
-    transition: transform .75s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .categorias .categoria{    
+    position: relative;
+    width: 430px;
+    height: 260px;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 25px;
+}
+.categorias .categoria{
+    margin: 1px;
 }
 
-.categoria:hover .categoriaImg {
+.categorias .categoria img{
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    transition: transform 0.2 linear;
+}
+.categoria:hover img{
     transform: scale(1.05);
 }
 
+.categoria h2{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
 
 @media screen and (min-width:48em) {
     .categorias {
@@ -76,6 +74,6 @@ h1 {
 
 @media screen and (min-width:80em) {
     .categoria {
-        width: calc(33% - 1em);
+        width: calc(20% - 1em);
     }
 }

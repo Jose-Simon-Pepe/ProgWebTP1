@@ -42,6 +42,10 @@
     color: white;
 }
 
+.hide {
+    display: none;
+}
+
 .placeholder {
     color: rgb(166, 166, 166);
 }
