@@ -69,10 +69,9 @@ function subirProductoACarrito(producto) {
     // caso afirmativo, se agrega una cantidad
 }
 
-/*function aniadirConsumo(producto, valor){
-    console.log("tiene este producto "+localStorage.getItem(producto.id));
+function aniadirConsumo(producto, valor){
     producto = JSON.parse(localStorage.getItem(producto.id));
     producto.cantidadConsumo =+ valor;
     localStorage.removeItem(producto.id);
     localStorage.setItem(producto.id,JSON.stringify(producto));
-}*/
+}
