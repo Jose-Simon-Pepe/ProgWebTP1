@@ -29,3 +29,18 @@ let prod4 = new Prod("Cerveza tradicional", "$42", "images/cerveza-2.jpg", 4, 0)
 
 let listaProductos = [prod1, prod2, prod3, prod4];
 
+const carruselCointener = document.getElementById('carrouselContenido');
+const slide = document.querySelector('.productoC');
+
+const izquierda = document.getElementById('flechaIzqBtn');
+const derecha = document.getElementById('flechaDerBtn');
+
+derecha.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    carruselCointener.scrollLeft += slideWidth;
+});
+
+izquierda.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    carruselCointener.scrollLeft -= slideWidth;
+});
