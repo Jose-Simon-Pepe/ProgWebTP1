@@ -1,0 +1,1 @@
+// este script actualiza alguno de los objetos que ya estan guardados en localstorage

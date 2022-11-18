@@ -1,0 +1,1 @@
+// este script añade un elemento al localstorage según el objeto que sea
