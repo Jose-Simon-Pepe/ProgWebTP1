@@ -11,7 +11,7 @@ entities.forEach(entity => localStorage.setItem(entity,table));
 
 import * as aniadir from './aniadir.mjs';
 import * as eliminar from './eliminar.mjs';
-//import * as actualizar from 'actualizar.mjs';
+import * as actualizar from './actualizar.mjs';
 
 aniadir.nuevo("productoCarrito",{
     firstName: "John",
@@ -21,4 +21,19 @@ aniadir.nuevo("productoCarrito",{
     id: 1
   });
 
-eliminar.elemento("productoCarrito", 1);
+
+actualizar.elemento("productoCarrito",{
+    firstName: "John",
+    lastName: "Dsdfsdfoe",
+    age: 50,
+    eyeColor: "blue",
+    id: 1
+  });
+
+  actualizar.elemento("productoCarrito",{
+    firstName: "John",
+    lastName: "s",
+    age: 30,
+    eyeColor: "blue",
+    id: 1
+  });
