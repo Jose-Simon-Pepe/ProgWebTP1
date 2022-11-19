@@ -2,7 +2,7 @@
 
 import * as encontrar from './encontrar.mjs';
 
-export function elemento(entity,recordId){
+export var eliminar = function eliminar(entity,recordId){
     let storage = encontrar.getEntity(entity);
     storage.forEach(element => {
         if (element.id == recordId) {

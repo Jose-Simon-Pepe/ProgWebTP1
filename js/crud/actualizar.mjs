@@ -3,7 +3,7 @@
 import * as encontrar from './encontrar.mjs';
 
 
-export function elemento(entity,newRecord){
+export var actualizar =  function actualizar(entity,newRecord){
     let storage = encontrar.getEntity(entity);
     storage.forEach(element => {
         if (element.id == newRecord.id) {

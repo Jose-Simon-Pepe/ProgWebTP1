@@ -3,7 +3,7 @@
 
 import * as encontrar from './encontrar.mjs';
 
-export function nuevo(entity,record){
+export var nuevo = function nuevo(entity,record){
     let storage = encontrar.getEntity(entity);
     storage.push(record);
     localStorage.setItem(entity, JSON.stringify(storage));
