@@ -8,7 +8,7 @@ function getEntity(entity){
     }
 }
 
-export function add(entity,record){
+export function nuevo(entity,record){
     let storage = getEntity(entity);
     storage.push(record);
     localStorage.setItem(entity, JSON.stringify(storage));

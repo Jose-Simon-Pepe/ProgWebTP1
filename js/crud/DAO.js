@@ -10,10 +10,10 @@ entities.forEach(entity => localStorage.setItem(entity,table));
 //including crud files
 
 import * as aniadir from './aniadir.mjs';
-//import * as eliminar from 'eliminar.mjs';
+import * as eliminar from './eliminar.mjs';
 //import * as actualizar from 'actualizar.mjs';
 
-aniadir.add("productoCarrito",{
+aniadir.nuevo("productoCarrito",{
     firstName: "John",
     lastName: "Doe",
     age: 50,
@@ -21,3 +21,4 @@ aniadir.add("productoCarrito",{
     id: 1
   });
 
+eliminar.elemento("productoCarrito", 1);
