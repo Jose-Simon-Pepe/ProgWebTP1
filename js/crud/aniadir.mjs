@@ -1,15 +1,10 @@
 // este script añade un elemento al localstorage según el objeto que sea
 
-function getEntity(entity){
-    if(localStorage.getItem(entity) == []){
-        return [];
-    }else{
-        return JSON.parse(localStorage.getItem(entity));
-    }
-}
+
+import * as encontrar from './encontrar.mjs';
 
 export function nuevo(entity,record){
-    let storage = getEntity(entity);
+    let storage = encontrar.getEntity(entity);
     storage.push(record);
     localStorage.setItem(entity, JSON.stringify(storage));
 }
