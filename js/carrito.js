@@ -1,3 +1,5 @@
+
+
 // carrito logic
 
 // recuperación de productos en mi carrito
@@ -48,6 +50,7 @@ cargarItems();
 
 // eliminación de producto de carrito
 
+
 let iconoTacho = document.getElementsByClassName("icono-tacho");
 
 Array.from(iconoTacho).forEach(function (icono) {
@@ -56,3 +59,4 @@ Array.from(iconoTacho).forEach(function (icono) {
         console.log(icono.id);
     })
 });
+

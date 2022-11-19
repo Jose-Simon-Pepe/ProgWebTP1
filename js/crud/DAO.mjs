@@ -2,7 +2,7 @@
 
 // setting up localstorage
 const table = [];
-let entities = ["productoCarrito","metodoPago","usuario","direcciones", "producto"];
+let entities = ["productoCarrito","metodoPago","usuario","direccion", "producto"];
 
 entities.forEach(entity => localStorage.setItem(entity,table));
 
