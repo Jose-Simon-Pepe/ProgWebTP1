@@ -17,5 +17,7 @@ aniadir.add("productoCarrito",{
     firstName: "John",
     lastName: "Doe",
     age: 50,
-    eyeColor: "blue"
+    eyeColor: "blue",
+    id: 1
   });
+

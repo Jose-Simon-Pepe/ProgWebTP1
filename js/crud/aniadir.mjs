@@ -10,7 +10,6 @@ function getEntity(entity){
 
 export function add(entity,record){
     let storage = getEntity(entity);
-    localStorage.setItem("record", JSON.stringify(record));
     storage.push(record);
     localStorage.setItem(entity, JSON.stringify(storage));
 }
