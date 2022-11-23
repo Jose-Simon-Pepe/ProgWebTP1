@@ -18,6 +18,6 @@ let  muestra = new Prod("cerveza","600","path",3,1);
 
 DAO.nuevo("productoCarrito",muestra);
 
-// DAO.eliminar("productoCarrito",3);
-
 DAO.actualizar("productoCarrito",muestra);
+
+DAO.eliminar("productoCarrito",3);
