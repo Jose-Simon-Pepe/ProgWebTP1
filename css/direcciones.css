@@ -16,7 +16,7 @@
 margin-top: 0.5em;
 }
 
-.form-button >a{
+.form-button a{
     padding: 10px 20px;
     font-size: 15px;
     font-weight: 600;
@@ -79,7 +79,9 @@ margin-top: 0.5em;
     font-size: 22px;
 }
 
-form {
+
+
+.form-pop-up {
     box-shadow: 0 0 5px #CCC;
     position: relative;
     background-color: grey;

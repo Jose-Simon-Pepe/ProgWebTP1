@@ -16,7 +16,7 @@
 margin-top: 0.5em;
 }
 
-.form-button >a{
+.form-button a, button{
     padding: 10px 20px;
     font-size: 15px;
     font-weight: 600;
@@ -52,7 +52,7 @@ margin-top: 0.5em;
 }
 
 .center form{
-    width: 100%;
+    width: 30em;
     margin: 0%;
 }
 
@@ -115,4 +115,22 @@ form {
     justify-content: center;
     width: 90%;
     margin: 0% auto;
+}
+/**/
+.logo {
+    width: 17vh;
+    height: auto;
+    margin-top: 7px;
+}
+.form-button a:hover,button:hover {
+    background-color: #636363;
+    color: #fff;
+
+} 
+
+
+
+.form-button a:active, button:active{
+    background: rgb(230, 228, 228); 
+    color: #fff; 
 }

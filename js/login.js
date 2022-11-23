@@ -1,6 +1,11 @@
+import { nuevo } from "./crud/aniadir.mjs";
+import { getEntity } from "./crud/encontrar.mjs";
+
 const btn = document.getElementById("btn");
 let form = document.getElementById("form");
-  form.addEventListener("keyup", validar);
+form.addEventListener("keyup", validar);
+
+btn.addEventListener('click', ingresoDeUsuario);
 
 function validar(event) {
   event.preventDefault();
@@ -22,11 +27,51 @@ function validar(event) {
     }
   }
 
-  const almacenarUsuario = document.getElementById("usuarioInput").value;
+  /*const almacenarUsuario = document.getElementById("usuarioInput").value;
   localStorage.setItem("usuario", JSON.stringify(almacenarUsuario));
   JSON.parse(localStorage.getItem("usuario"));
 
   const almacenarContraseña = document.getElementById("contraseña").value;
   localStorage.setItem("contraseña", JSON.stringify(almacenarContraseña));
-  JSON.parse(localStorage.getItem("contraseña"));
+  JSON.parse(localStorage.getItem("contraseña"));*/
 }
+
+function buscarUsuario(){
+  let usuario = document.getElementById("usuarioInput").value;
+  let contrasenia = document.getElementById("contraseña").value;
+  
+  var listaUsuarios = new Array();
+  listaUsuarios = getEntity("usuario");
+
+  if(listaUsuarios==null){
+    console.log(listaUsuarios);
+  }else{
+    for(var i=0; i<listaUsuarios.length; i++){
+
+      if(usuario == listaUsuarios[i].mail &&  contrasenia == listaUsuarios[i].pass){
+        return listaUsuarios[i];
+      }
+    }
+    return null;
+
+  }
+  
+
+}
+function ingresoDeUsuario(){ //funcion te necesito para Mi cuenta
+  var usuarioLogueado = buscarUsuario();
+  
+  if(usuarioLogueado!= null){
+    
+    nuevo("usuarioLogueado",usuarioLogueado);
+    location.href= "mi-cuenta.html";
+    
+
+  }else {
+    var mensajesError = "Usuario y/o contraseña incorrecta";
+    document.getElementById("mensaje-login").innerHTML = mensajesError;
+    
+  }
+}
+
+
