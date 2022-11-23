@@ -22,11 +22,4 @@ function validar(event) {
     }
   }
 
-  const almacenarUsuario = document.getElementById("usuarioInput").value;
-  localStorage.setItem("usuario", JSON.stringify(almacenarUsuario));
-  JSON.parse(localStorage.getItem("usuario"));
-
-  const almacenarContraseña = document.getElementById("contraseña").value;
-  localStorage.setItem("contraseña", JSON.stringify(almacenarContraseña));
-  JSON.parse(localStorage.getItem("contraseña"));
 }
