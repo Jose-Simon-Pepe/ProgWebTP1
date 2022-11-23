@@ -4,7 +4,7 @@
 let productosMasVendido = document.getElementsByClassName("productos-mas-vendido")[0];
 
 function createLiFromProduct(prod, iterador) {
-   
+
     const liProducto = `
    
         <img src="${prod.image}" alt="${prod.nombre}">
@@ -48,30 +48,26 @@ let agregarCarritoButtons = document.getElementsByClassName("agregarCarrito");
 
 for (let index = 0; index < agregarCarritoButtons.length; index++) {
     let currentButton = agregarCarritoButtons[index];
-    currentButton.addEventListener("click", () => {
-        console.log(listaProductos[currentButton.id]);
-        subirProductoACarrito(listaProductos[currentButton.id]);
+    currentButton.addEventListener("click", (e) => {
+        e.preventDefault(true);
+        subirProductoACarrito(getEntityById("producto",currentButton.id));
     })
 }
 
 // persistencia en localstorage de los productos
 
 function subirProductoACarrito(producto) {
-    // se busca si existe item con mismo id
-    if (localStorage.getItem(producto.id) != null) {
-        aniadirConsumo(producto, 1);
+
+
+    if (getEntity("productoCarrito",producto) == null) {
+        nuevo("productoCarrito",producto)
+    }else{
+        aniadirConsumo(producto,1)
     }
-    else {
-        // caso negativo, se agrega el item
-        producto.cantidadConsumo++;
-        localStorage.setItem(producto.id, JSON.stringify(producto));
-    }
-    // caso afirmativo, se agrega una cantidad
 }
 
-function aniadirConsumo(producto, valor){
-    producto = JSON.parse(localStorage.getItem(producto.id));
-    producto.cantidadConsumo =+ valor;
-    localStorage.removeItem(producto.id);
-    localStorage.setItem(producto.id,JSON.stringify(producto));
+function aniadirConsumo(producto, valor) {
+    let recuperado = getEntity("productoCarrito",producto);
+    recuperado.cantidadConsumo =+ valor;
+    actualizar("productoCarrito",recuperado)
 }

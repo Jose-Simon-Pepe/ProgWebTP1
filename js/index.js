@@ -33,4 +33,5 @@ flechaIzquierda.addEventListener("click", () => {
   carrouselCointener.scrollLeft -= slideWidth;
 });
 
+// add carrito
 

@@ -34,19 +34,25 @@ function createProductItemInCarrito(producto) {
     document.getElementsByClassName("listado-carrito")[0].appendChild(liElement);
 }
 
+let productStorage = localStorage.productoCarrito
+
 function cargarItems() {
-    Array.from(localStorage).forEach(function (producto) {
+    Array.from(productStorage).forEach(function (producto) {
 
         for (var i = 0; i < localStorage.length; i++) {
-            let toUp = localStorage.getItem(localStorage.key(i));
+          let toUp = localStorage.getItem(localStorage.key(i));
             createProductItemInCarrito(JSON.parse(toUp));
-        }
+      }
 
     })
 }
 
 
 cargarItems();
+
+// agregar al carrito
+
+
 
 // eliminación de producto de carrito
 
@@ -59,4 +65,5 @@ Array.from(iconoTacho).forEach(function (icono) {
         console.log(icono.id);
     })
 });
+
 
