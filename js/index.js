@@ -32,3 +32,5 @@ flechaIzquierda.addEventListener("click", () => {
   const slideWidth = metP.clientWidth;
   carrouselCointener.scrollLeft -= slideWidth;
 });
+
+

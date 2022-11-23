@@ -35,12 +35,15 @@ const slide = document.querySelector('.productoC');
 const izquierda = document.getElementById('flechaIzqBtn');
 const derecha = document.getElementById('flechaDerBtn');
 
-derecha.addEventListener("click", () => {
-    const slideWidth = slide.clientWidth;
-    carruselCointener.scrollLeft += slideWidth;
-});
-
-izquierda.addEventListener("click", () => {
-    const slideWidth = slide.clientWidth;
-    carruselCointener.scrollLeft -= slideWidth;
-});
+if (derecha) {
+    derecha.addEventListener("click", () => {
+        const slideWidth = slide.clientWidth;
+        carruselCointener.scrollLeft += slideWidth;
+    });
+}
+if (izquierda) {
+    izquierda.addEventListener("click", () => {
+        const slideWidth = slide.clientWidth;
+        carruselCointener.scrollLeft -= slideWidth;
+    });
+}

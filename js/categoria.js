@@ -1,15 +1,14 @@
 function buscar() {
-  let filter = document.getElementById("buscador").value.toUpperCase();
-  let item = document.querySelectorAll(".categoria");
-  let titulo = document.getElementsByTagName("h2");
-
-  for (var i = 0; i <= titulo.length; i++) {
-    let a = item[i].getElementsByTagName("h2")[0];
-    let value = a.innerHTML || a.innerText || a.textContent;
-    if (value.toUpperCase().indexOf(filter) > -1) {
-      item[i].style.display = "";
-    } else {
-      item[i].style.display = "none";
+  let input = document.getElementById('buscador').value
+    input=input.toLowerCase();
+    let x = document.querySelectorAll('.categoria');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="";                 
+        }
     }
-  }
 }
