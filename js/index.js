@@ -33,5 +33,19 @@ flechaIzquierda.addEventListener("click", () => {
   carrouselCointener.scrollLeft -= slideWidth;
 });
 
-// add carrito
+//Carrousel Categorias
+const carrouselCategorias = document.getElementById('categoriasAll');
+const categoria = document.querySelector('.categoria');
 
+const flechaizquierda = document.getElementById('flecha-izquierda');
+const flechaderecha = document.getElementById('flecha-derecha');
+
+flechaderecha.addEventListener("click", () => {
+  const slideWidth = categoria.clientWidth;
+  carrouselCategorias.scrollLeft += slideWidth;
+});
+
+flechaizquierda.addEventListener("click", () => {
+  const slideWidth = categoria.clientWidth;
+  carrouselCategorias.scrollLeft -= slideWidth;
+});

@@ -180,7 +180,9 @@ ul.slider-pagos li:first-child {
 .metodosDePago .mainContenedor .flechaIzq,
 .metodosDePago .mainContenedor .flechaDer,
 .principalIndex .nextBtn,
-.principalIndex .beforeBtn {
+.principalIndex .beforeBtn,
+.containerCategorias .carrouselCategorias .flecha-izquierda,
+.containerCategorias .carrouselCategorias .flecha-derecha{
     position: absolute;
     display: flex;
     align-items: center;
@@ -196,25 +198,29 @@ ul.slider-pagos li:first-child {
 }
 
 .metodosDePago .mainContenedor .flechaIzq,
-.principalIndex .nextBtn {
+.principalIndex .nextBtn,
+.containerCategorias .carrouselCategorias .flecha-izquierda {
     left: 0;
 }
 
 .metodosDePago .mainContenedor .flechaDer,
-.principalIndex .beforeBtn {
+.principalIndex .beforeBtn,
+.containerCategorias .carrouselCategorias .flecha-derecha {
     right: 0;
 }
 
 .metodosDePago .mainContenedor .flechaIzq:hover,
 .metodosDePago .mainContenedor .flechaDer:hover,
 .principalIndex .nextBtn:hover,
-.principalIndex .beforeBtn:hover {
+.principalIndex .beforeBtn:hover,
+.containerCategorias .carrouselCategorias .flecha-izquierda:hover,
+.containerCategorias .carrouselCategorias .flecha-derecha:hover {
     background: rgba(255, 0, 0, .9);
 }
 
 .principalIndex {
     margin: 1rem;
-    margin-bottom:-180px;
+    margin-bottom:-350px;
     position: relative;
     overflow: hidden;
 }
@@ -239,4 +245,41 @@ ul.slider-pagos li:first-child {
 .carrouselPrincipal::-webkit-scrollbar {
     width: 0;
     height: 0;
+}
+
+/*Carrousel categorias*/
+h1{
+    text-align: center;
+}
+.containerCategorias {
+    position: relative;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.containerCategorias .carrouselCategorias {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.containerCategorias .carrouselCategorias .categoriasAll {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0 48px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.containerCategorias .categoriasAll .categoria {
+    min-width: 25%;
+    transition: .3s ease all;
+    padding: 32px;
+}
+
+.categoria {
+    width: 45vh;
+    height: 30vh;
+
 }
