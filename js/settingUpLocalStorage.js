@@ -2,7 +2,7 @@
 
 // setting up localstorage
 const table = [];
-let entities = ["productoCarrito","metodoPago","usuario","direccion", "producto"];
+let entities = ["productoCarrito","metodoPago","usuario","direccion", "producto","usuarioLogueado"];
 
 entities.forEach(entity => {
   if (localStorage.$entity == null) {
@@ -40,7 +40,7 @@ function getEntityById(entity, recordId){
     console.log("puto")
       return [];
   }else{
-    let storage = JSON.parse(localStorage.getItem(entity));
+    let storage = JSON.parse(localStorage.getItem(entity) );
       return JSON.parse(localStorage.getItem(entity));
   }
 }

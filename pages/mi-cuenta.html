@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,20 @@
     <link rel="stylesheet" href="../css/share.css">
     <link rel="stylesheet" href="../css/mi-cuenta.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/logIn.css">
     <link rel="stylesheet" href="../css/direcciones.css">
+
 
 
     <title>Mi cuenta</title>
 </head>
+
 <body>
     <header>
         <div class="header__pri">
-            <img class="logo" src="../img/Logo.png" alt="logo">
+            <a href="../index.html">
+                <img class="logo" src="../img/Logo.png" alt="logo">
+            </a>
             <div class="buscar">
                 <span class="material-icons">
                     search
@@ -46,11 +52,39 @@
     </header>
 
     <main class="mis-datos">
-       
-        <section>
+        <!-- BOTONES RECORDAR HACERLO BONITO -->
+        <section class="iniciarSesion-Registrarse" id="login-regis">
+            <div class="loginBox">
+                <h1>Iniciar Sesion</h1>
+                <form action="" id="form">
+                    <div class="usuario">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" name="usuario" id="usuarioInput" required>
+                    </div>
+                    <div class="usuario">
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" name="contraseña" id="contraseña" required>
+                    </div>
+                    <div class="olvido"><a href="#">¿Olvidaste la contraseña?</a></div>
+                   <!--<a href="../index.html">--> 
+                    <input disabled class="btn" id="btn" type="button"  value="Iniciar Sesión">
+                    <!--</a>-->
+                    <div class="registro">¿No tenes cuenta?
+                        <a href="crear_usuario.html">Registrate</a>
+                    </div>
+                    <div id="mensaje-login" class="error">
+                        
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+        <!-- BOTONES RECORDAR HACERLO BONITO -->
+
+        <section  class = "miCuenta" id="idCuenta">
             <article class="fotoynombre">
                 <div><img class="foto-perfil" src="../images/homero-perfil.jpg" alt="foto de perfil de Homero"></div>
-                <h1>Homero J. Simpson</h1>
+                <h1 id="nombre-apellido">Nombre Apellido</h1>
             </article>
 
             <article>
@@ -60,32 +94,15 @@
                         <a class="boton-agregar" href="#popup-direccion">Agregar</a>
                     </p>
                 </div>
-                
-                <div class="grilla">
-                    <p class="item-direc"><span class="bold-grilla">Alias</span></p>
-                    <p class="item-direc"><span class="bold-grilla">Dirección</span></p>
-                    <p class="espacio"></p>
-                    <p class="item-direc">Mi casa</p>
 
-                    <div class="item-direc">
-                        <p>Avenida Siempreviva 555</p>
-                        <p>Código  postal 1234 - CABA - Almagro</p>
-                    </div>
-
-                    <div class="tachito">
-                        <button class="icono-tacho"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-                    <p class="item-direc">Casa papá</p>
-                    <div class="item-direc">
-                        <p>Avenida Siempreviva 222</p>
-                        <p>Código  postal 1111 - Provincia de Buenos Aires - Haedo </p>
-                    </div> 
-                    <div class="tachito">
-                        <button class="icono-tacho"><i class="fa-solid fa-trash"></i></button>
+                <div id="grilla"  class="grilla">
+                    <div class="fila">
+                        <p class="item-direc"><span class="bold-grilla">Alias</span></p>
+                        <p class="item-direc"><span class="bold-grilla">Dirección</span></p>
                     </div>
                 </div>
             </article>
-<!----------------------------------------------------------------------------------------------------------------------->
+            <!----------------------------------------------------------------------------------------------------------------------->
             <article>
                 <div class="subtitulo">
                     <h2><i class="fa-regular fa-credit-card"></i> Mis métodos de pago</h2>
@@ -95,190 +112,143 @@
                 </div>
 
                 <div class="grilla">
-                    <div class="item-direc">
-                        <p class="fondo-banco"><img class="banco" src="../images/bancos/banco-hsbc.png" alt="Banco HSBC"></p>
+                    <div class="grilla-fila">
+
+
                     </div>
 
-                    <div class="item-direc">
-                        <span class="bold-grilla">Terminada en 1234</span>
-                        <p>HSBC Bank Argentina S.A.</p>
-                        <p>Vencimiento: 05-2030</p>
-                    </div>
 
-                    <div class="tachito">
-                        <button class="icono-tacho"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-
-                    <div class="item-direc">
-                        <p class="fondo-banco"><img class="banco" src="../images/bancos/banco-macro.png" alt="Banco Macro"></p>
-                    </div>
-
-                    <div class="item-direc">
-                        <span class="bold-grilla">Terminada en 8888</span>
-                        <p>Banco Macro Argentina S.A.</p>
-                        <p>Vencimiento: 10-2022</p>
-                    </div>
-
-                    <div class="tachito">
-                        <button class="icono-tacho" ><i class="fa-solid fa-trash"></i></button>
-                    </div>
-
-                    <div class="item-direc">
-                        <p class="fondo-banco"><img class="banco" src="../images/bancos/banco-galicia.png" alt="Banco Galicia"></p>
-                    </div>
-
-                    <div class="item-direc">
-                        <span class="bold-grilla">Terminada en 1111</span>
-                        <p>Banco Galicia Argentina S.A.</p>
-                        <p>Vencimiento: 09-2030</p>
-                    </div>
-
-                    <div class="tachito">
-                        <button class="icono-tacho"><i class="fa-solid fa-trash"></i></button>
-                    </div>
                 </div>
 
             </article>
+
+            <article class="boton-cerrar-sesion" id="cerrarSesion">
+                <button type="button">Cerrar Sesión</button>
+            </article>
+
         </section>
     </main>
 
 
-        <!-----------------------------AUN NO TIENE CUENTA------------------------------>
-        <aside>
-            <a  id="boton-registro" href="#crear-usuario">¿Aún no tiene cuenta? Registrarse</a>
-        </aside>
-
-
-
-         <!------------------------POP UP NUEVA DIRECCION GIULI------------------------------------>
-         <div id="popup-direccion" class="center">
-            <form action="#">
-                <div class="popup-header">
-                    <p class="misDirecciones">Nueva Dirección</p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <a id="cerrar" href="#">&times;</a>
-                </div>
-                <div class="form-element">
-                    <label for="alias">Alias</label>
-                    <input type="text" id="alias" name="alias" placeholder="Alias">
-                </div>
-                <div class="form-element">
-                    <label for="provincia">Provincia</label>
-                    <select name="provincia" id="provincia">
-                        <option value="0">Seleccionar Provincia</option>
-                        <option value="1">Buenos Aires</option>
-                    </select>
-                </div>
-                <div class="form-element">
-                    <label for="localidad">Localidad</label>
-                    <select name="localidad" id="localidad">
-                        <option value="0">Seleccionar Localidad</option>
-                        <option value="1">La Matanza</option>
-                        <option value="1">Morón</option>
-                        <option value="1">Ramos Mejia</option>
-                    </select>
-                </div>
-                <div class="form-element">
-                    <label for="direccion">Direccion</label>
-                    <input type="text" id="direccion" name="direccion" placeholder="Direccion">
-                </div>
-                <div class="form-element">
-                    <label for="telefono">Telefono</label>
-                    <input type="text" id="telefono" name="telefono" placeholder="Telefono">
-                </div>
-                <div class="form-element">
-                    <label for="piso">Piso</label>
-                    <input type="text" name="piso" id="piso" placeholder="Piso">
-                </div>
-                <div class="form-element">
-                    <label for="dto">Dto</label>
-                    <input type="text" name="dto" id="dto" placeholder="Dto">
-                </div>
-                <div class="form-element form-button">
-                    <button>Guardar</button>
-                </div>
-            </form>
-    
-        </div>
-
-    
-    
-         <!------------------------POP UP NUEVO METODO DE PAGO ------------------------------------>
-         <div class="center" id="mis-metodos-de-pago">
-            <form action="#" method="get" enctype="text/plain">
-                <div class="popup-header">
-                    <p>Nueva tarjeta</p>
-                    <i class="fa-solid fa-credit-card"></i>
-                    <a id="cerrar" href="#">&times;</a>
-                </div>
-                <div class="form-element">
-                    <label for="new-card-alias">Alias</label>
-                    <input type="text" name="new-card-alias" id="new-card-alias" placeholder="Alias" autofocus>
-                </div>
-                <div class="form-element">
-                    <label for="new-card-number">Número</label>
-                    <input type="text" name="new-card-number" id="new-card-number" placeholder="Número tarjeta">
-                </div>
-                <div class="form-element">
-                    <label for="new-card-code">Código</label>
-                    <input type="text" name="new-card-code" id="new-card-code" placeholder="Código" maxlength="3">
-                    </div>
-                    <div class="form-element">
-                    <label for="new-card-expiration">Vencimiento</label>
-                    <input type="text" name="new-card-expiration" id="new-card-expiration" placeholder="00-00" maxlength="5">
-                </div>
-                <div class="form-element">
-                    <label for="new-card-holder">Titular</label>
-                    <input type="text" name="new-card-holder" id="new-card-holder" placeholder="Titular">
-                </div>
-                <div class="form-element form-button">
-                    <button>Guardar</button>
-                </div>
-            </form>
-        </div>
-         <!------------------------POP UP CREAR USUARIO-------------------------------------------->
-         <div class="center" id="crear-usuario">
-         <form action="#">
-
+    <!------------------------POP UP NUEVA DIRECCION GIULI------------------------------------>
+    <div id="popup-direccion" class="center">
+        <form action="#" id="formularioDomicilio" class="form-pop-up">
             <div class="popup-header">
-                <p>Registrarse</p>
+                <p class="misDirecciones">Nueva Dirección</p>
+                <i class="fa-solid fa-location-dot"></i>
+                <a id="cerrar" href="#">&times;</a>
+            </div>
+            <div class="form-element">
+                <label for="alias">Alias</label>
+                <input type="text" id="alias" name="alias" placeholder="Alias">
+            </div>
+            <div class="form-element">
+                <label for="provincia">Provincia</label>
+                <select name="provincia" id="provincia">
+                    <option value="0">Seleccionar Provincia</option>
+                    <option value="1">Buenos Aires</option>
+                    <option value="2">Capital Federal</option>
+                </select>
+            </div>
+
+            <div class="form-element">
+                <label for="localidad">Localidad</label>
+                <select name="localidad" id="localidad">
+                    <option value="0">Seleccionar Localidad</option>
+                    <option value="1">La Matanza</option>
+                    <option value="2">Morón</option>
+                    <option value="3">Ramos Mejia</option>
+                    <option value="4">Olivos</option>
+                    <option value="5">Almagro</option>
+                    <option value="6">Balvanera</option>
+                    <option value="7">Belgrano</option>
+                </select>
+            </div>
+
+            <div class="form-element">
+                <label for="direccion">Direccion</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Direccion">
+            </div>
+
+            <div class="form-element">
+                <label for="telefono">Telefono</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Telefono">
+            </div>
+
+            <div class="form-element">
+                <label for="piso">Piso</label>
+                <input type="text" name="piso" id="piso" placeholder="Piso">
+            </div>
+
+            <div class="form-element">
+                <label for="dto">Dto</label>
+                <input type="text" name="dto" id="dto" placeholder="Dto">
+            </div>
+
+            <div class="form-element form-button">
+                <button type="button" id="btn-guardar-direccion">Guardar</button>
+            </div>
+            <div id="mensaje" class="error">
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+    <!------------------------POP UP NUEVO METODO DE PAGO ------------------------------------>
+    <div class="center" id="mis-metodos-de-pago">
+        <form action="#" method="get" enctype="text/plain" id="formularioTarjeta" class="form-pop-up">
+            <div class="popup-header">
+                <p>Nueva tarjeta</p>
                 <i class="fa-solid fa-credit-card"></i>
                 <a id="cerrar" href="#">&times;</a>
             </div>
+            <div class="form-element">
+                <label for="new-card-alias">Alias</label>
+                <select name="new-card-alias"" id=" new-card-alias">
+                    <option value="0">Seleccionar Banco</option>
+                    <option value="1">Banco Galicia</option>
+                    <option value="2">Banco HSBC</option>
+                    <option value="3">Banco Macro</option>
+                    <option value="4">Banco Nación</option>
+                </select>
 
-            <div class="form-element">
-                <label for="new-email">Email</label>
-                <input type="email" name="new-email" id="new-email" placeholder="ejemplo@gmail.com">
             </div>
             <div class="form-element">
-                <label for="new-email">Nombre</label>
-                <input type="text" name="new-name" id="new-name" placeholder="tu nombre">
+                <label for="new-card-number">Número</label>
+                <input type="text" name="new-card-number" id="new-card-number" placeholder="Número tarjeta" maxlength="10">
             </div>
             <div class="form-element">
-                <label for="new-email">Apellido</label>
-                <input type="text" name="new-secondaryname" id="new-secondaryname" placeholder="tu apellido">
+                <label for="new-card-code">Código</label>
+                <input type="text" name="new-card-code" id="new-card-code" placeholder="Código" maxlength="3">
             </div>
             <div class="form-element">
-                <label for="new-email">Contraseña</label>
-                <input type="password" name="new-pass" id="new-pass" placeholder="tu pass">
+                <label for="new-card-expiration">Vencimiento</label>
+                <input type="text" name="new-card-expiration" id="new-card-expiration" placeholder="0000"
+                    maxlength="4">
             </div>
             <div class="form-element">
-                <label for="new-email">Repetir contraseña</label>
-                <input type="password" name="new-pass-again" id="new-pass-again" placeholder="tu pass">
+                <label for="new-card-holder">Titular</label>
+                <input type="text" name="new-card-holder" id="new-card-holder" placeholder="Titular">
             </div>
-          
+
             <div class="form-element form-button">
-                <a class="a-to-button" href="login.html">Cancelar</button>
-                <a class="a-to-button" href="login.html">Guardar</button>
+                <button type="button" id="btn-guardar-tarjeta">Guardar</button>
             </div>
-    
+            <div id="mensaje" class="error">
+
+            </div>
+
         </form>
-        </div>
-        
-         
+    </div>
+
+
     <footer class="contenedor-footer">
         <div>
-            <img class= "img" src="../images/logo_unlam2.png" alt="logo-unlam">
+            <img class="img" src="../images/logo_unlam2.png" alt="logo-unlam">
             <p>Lunes a Sábado</p>
             <p>de 8 a 14hs. y de 16 a 20hs.</p>
         </div>
@@ -292,17 +262,24 @@
         <div>
             <p>Seguinos en: </p>
             <p class="iconos-red-social">
-                <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/UnlamOficial/" target="_blank"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/unlamoficial/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
             </p>
-            
+
         </div>
 
     </footer>
 
-    
-    
     <script src="../js/settingUpLocalStorage.js"></script>
+    <script src="../js/miCuenta.js" type="module"></script>
+    <script src="../js/interfazMetodoPago.js" type="module"></script>
+    <script src="../js/validarDomicilio.js"></script>
+    <script src="../js/interfazDomicilioNuevo.js" type="module"></script>
+
+    <script src="../js/login.js" type="module"></script>
+   
 </body>
 
 </html>
