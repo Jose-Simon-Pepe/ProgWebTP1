@@ -165,10 +165,14 @@ function borrarTarjeta(tarjeta, idFila){
     var tarjetaList = getEntity("metodoPago");
     //var idTarjeta = tarjeta.id;
     console.log(tarjeta);
+    console.log(idFila)
     if(tarjeta== null){
 
     }else{
-        let indiceTarjetaEnVector =tarjetaList.findIndex(element => element.id === idFila);
+        let indiceTarjetaEnVector =tarjetaList.findIndex(element => element.id == idFila);
+        console.log("indice "+ indiceTarjetaEnVector)
+       indiceTarjetaEnVector;
+    
         tarjetaList.splice(indiceTarjetaEnVector,1);
         let tarjetasJSON =JSON.stringify(tarjetaList);
         localStorage.setItem('metodoPago',tarjetasJSON)

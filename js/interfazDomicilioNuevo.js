@@ -185,15 +185,10 @@ function borrarDireccion(direccion, idFila){
     if(direccion== null){
 
     }else{
-        let indiceDireccionEnVector =direccionList.findIndex(element => element.id === idFila);
+        let indiceDireccionEnVector =direccionList.findIndex(element => element.id == idFila);
         direccionList.splice(indiceDireccionEnVector,1);
         let direccionesJSON =JSON.stringify(direccionList);
         localStorage.setItem('direccion',direccionesJSON)
-        /*for(var i=0; i<tarjetaList.length; i++){
-            if((tarjetaList[i].idUsuario == tarjeta.idUsuario) && (tarjetaList[i].id== idFila)){
-                eliminar("metodoPago",tarjeta.id);
-            }
-            
-        }*/
+        
     }    
 }
