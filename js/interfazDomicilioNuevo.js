@@ -1,5 +1,3 @@
-import { nuevo } from "./crud/aniadir.mjs";
-import { getEntity } from "./crud/encontrar.mjs";
 
 document.querySelector('#btn-guardar-direccion').addEventListener('click', guardarDomicilio);
 drawDomicilioTable();

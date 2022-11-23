@@ -1,5 +1,4 @@
-import { getEntity } from "./crud/encontrar.mjs";
-import { eliminar } from "./crud/eliminar.mjs";
+
 
 var unLogueado = getEntity("usuarioLogueado");
 

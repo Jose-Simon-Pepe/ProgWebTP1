@@ -1,5 +1,3 @@
-import { nuevo } from "./crud/aniadir.mjs";
-import { getEntity } from "./crud/encontrar.mjs";
 
 const btn = document.getElementById("btn");
 let form = document.getElementById("form");

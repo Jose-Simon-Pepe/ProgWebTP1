@@ -1,5 +1,3 @@
-import { nuevo } from './crud/aniadir.mjs';
-import { getEntity } from './crud/encontrar.mjs';
 
 
 /**ID
